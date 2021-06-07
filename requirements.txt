@@ -1,3 +1,4 @@
 discord.py==1.7.2
-requests
+coc.py==1.2.1
 psycopg2
+requests
