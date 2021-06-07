@@ -11,8 +11,4 @@ async def ping(ctx):
     await ctx.send(f'Pong!')
 
 
-def token():
-    return os.environ('BOT_TOKEN')
-
-
-bot.run(token())
+bot.run(os.environ['BOT_TOKEN'])
