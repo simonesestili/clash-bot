@@ -1,6 +1,7 @@
 import discord
 import json
 import requests
+import os
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix=';')
@@ -11,8 +12,7 @@ async def ping(ctx):
 
 
 def token():
-    with open('config.json', 'r') as f:
-        return json.load(f)['token']
+    return os.environ('BOT_TOKEN')
 
 
 bot.run(token())
