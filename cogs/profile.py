@@ -27,7 +27,7 @@ class Profile(commands.Cog):
         if response.status_code != 200:
             await ctx.send('Plese enter a valid player tag!')
         
-        conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
+        conn = psycopg2.connect(dbname=os.environ['DB_NAME'], user=os.environ['DB_USER'], password=os.environ['DB_PASS'], host=os.environ['DB_HOST'])
         with conn:
             with conn.cursor() as cur:
                 cur.execute(f'INSERT IGNORE INTO user_tags (discord_id, profile-tag) VALUES (\'{ctx.message.author.id}\', \'{tag}\')')
