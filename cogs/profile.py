@@ -19,8 +19,8 @@ class Profile(commands.Cog):
     pass
 
     #COMMANDS
-    @commands.command()
-    async def link(self, ctx, tag=''):
+    @commands.command(aliases=['linkprofile', 'LINKP', 'LINKPROFILE'])
+    async def linkp(self, ctx, tag=''):
         if tag.startswith('#'):
             tag = tag[1:]
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
@@ -32,6 +32,11 @@ class Profile(commands.Cog):
             with conn.cursor() as cur:
                 cur.execute(f'INSERT INTO user_tags (discord_id, profile_tag) VALUES (\'{ctx.message.author.id}\', \'{tag}\') ON CONFLICT DO NOTHING')
         conn.close()
+
+
+    @commands.command()
+    async def profile(self, ctx):
+
         
 
 

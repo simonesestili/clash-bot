@@ -7,11 +7,11 @@ class General(commands.Cog):
         self.bot = bot
 
     
-    #EVENTS
-    @commands.Cog.listener(hidden=True)
-    async def on_ready():
-        print('READY')
+    #COMMAND
+    @commands.command()
+    async def ping(self, ctx):
+        await ctx.send(f'Pong! {round(1000 * ctx.bot.latency)}ms')
 
 
 def setup(bot):
-    bot.add_got(General(bot))
+    bot.add_cog(General(bot))
