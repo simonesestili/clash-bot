@@ -30,7 +30,7 @@ class Profile(commands.Cog):
         conn = psycopg2.connect(dbname=os.environ['DB_NAME'], user=os.environ['DB_USER'], password=os.environ['DB_PASS'], host=os.environ['DB_HOST'])
         with conn:
             with conn.cursor() as cur:
-                cur.execute(f'INSERT IGNORE INTO user_tags (discord_id, profile-tag) VALUES (\'{ctx.message.author.id}\', \'{tag}\')')
+                cur.execute(f'INSERT INTO user_tags (discord_id, profile_tag) VALUES (\'{ctx.message.author.id}\', \'{tag}\') ON CONFLICT DO NOTHING')
         conn.close()
         
 
