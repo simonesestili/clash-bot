@@ -12,11 +12,8 @@ def fill_img(profile):
     my_image = Image.open('template.png')
     font_str = 'font.ttf'
     urllib.request.urlretrieve(profile['clan']['badgeUrls']['large'], 'cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
-    urllib.request.urlretrieve(profile['league']['iconUrls']['medium'], 'cogs/img/work/' + profile['league']['iconUrls']['medium'][48:])
     clan_badge_img = Image.open('cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
     clan_badge_img = clan_badge_img.resize((int(clan_badge_img.size[0] * 0.5),int(clan_badge_img.size[1] * 0.5)), 0)
-    league_badge_img = Image.open('cogs/img/work/' + profile['league']['iconUrls']['medium'][48:])
-    league_badge_img = league_badge_img.resize((int(league_badge_img.size[0] * 0.64),int(league_badge_img.size[1] * 0.64)), 0)
     image_editable = ImageDraw.Draw(my_image)
     color=(255,255,255)
     clash_font = ImageFont.truetype(font_str, 25)
@@ -59,9 +56,31 @@ def fill_img(profile):
     #clan badge
     my_image.paste(clan_badge_img, (551, 82), clan_badge_img)
     #league badge
+    league_badge_img = Image.open('cogs/img/leagues/' + get_league(profile['league']['name']) + '.png')
+    league_badge_img = league_badge_img.resize((int(league_badge_img.size[0] * 0.64),int(league_badge_img.size[1] * 0.64)), 0)
     my_image.paste(league_badge_img, (823, 16), league_badge_img)
+    
 
-    tag = profile['tag']
+    tag = profile['tag'][1:]
     my_image.save(f'cogs/img/out/{tag}.png')
 
 
+def get_league(name: str):
+    if name in ['Bronze League I', 'Bronze League II', 'Bronze League III']:
+        return 'bronze'
+    elif name in ['Silver League I', 'Silver League II', 'Silver League III']:
+        return 'silver'
+    elif name in ['Gold League I', 'Gold League II', 'Gold League III']:
+        return 'gold'
+    elif name in ['Crystal League I', 'Crystal League II', 'Crystal League III']:
+        return 'crystal'
+    elif name in ['Master League I', 'Master League II', 'Master League III']:
+        return 'master'
+    elif name in ['Champion League I', 'Champion League II', 'Champion League III']:
+        return 'champion'
+    elif name == 'Legend League':
+        return 'legend'
+    else:
+        return 'unranked'
+
+        

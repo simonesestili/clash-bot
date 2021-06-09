@@ -35,11 +35,13 @@ class Profile(commands.Cog):
             return
 
         postgresql.insert_player(ctx.author.id, tag)
+        await ctx.send('Successfully linked your clash of clans profile.')
 
 
     @commands.command()
     async def unlink(self, ctx):
         postgresql.unlink_user(ctx.author.id)
+        await ctx.send('Successfully unlinked your account.')
 
 
     @commands.command()
@@ -50,6 +52,7 @@ class Profile(commands.Cog):
             await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
             return
         edit.fill_img(response.json())
+        await ctx.send('**Your current profile.**', file=discord.File(f'cogs/img/out/{tag}.png'))
 
 
 def setup(bot):
