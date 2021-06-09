@@ -48,6 +48,7 @@ class Profile(commands.Cog):
     async def profile(self, ctx):
         tag = postgresql.select_id(ctx.author.id)[0]
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+        print(response)
         if response.status_code != 200:
             await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
             return
