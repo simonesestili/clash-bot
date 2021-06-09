@@ -11,6 +11,7 @@ BLACK = (0,0,0)
 def fill_img(profile):
     my_image = Image.open('cogs/img/work/template.png')
     font_str = 'font.ttf'
+    print(profile)
     urllib.request.urlretrieve(profile['clan']['badgeUrls']['large'], 'cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
     clan_badge_img = Image.open('cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
     clan_badge_img = clan_badge_img.resize((int(clan_badge_img.size[0] * 0.5),int(clan_badge_img.size[1] * 0.5)), 0)
@@ -57,8 +58,7 @@ def fill_img(profile):
     my_image.paste(clan_badge_img, (551, 82), clan_badge_img)
     #league badge
     league_badge_img = Image.open('cogs/img/leagues/' + get_league(profile['league']['name']) + '.png')
-    league_badge_img = league_badge_img.resize((int(league_badge_img.size[0] * 0.64),int(league_badge_img.size[1] * 0.64)), 0)
-    my_image.paste(league_badge_img, (823, 16), league_badge_img)
+    my_image.paste(league_badge_img, (830, 16), league_badge_img)
     
 
     tag = profile['tag'][1:]
