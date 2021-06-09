@@ -48,13 +48,11 @@ class Profile(commands.Cog):
     @commands.command()
     async def profile(self, ctx):
         tag = postgresql.select_id(ctx.author.id)[0]
-        # response = requests.get(f'https://api.clashofclans.com/v1/players/%23%7Btag%7D', headers=headers)
-        with open('j.json', 'r') as f:
-            response = json.load(f)
+        response = requests.get(f'https://api.clashofclans.com/v1/players/%23%7Btag%7D', headers=headers)
         
-        # if response.status_code != 200:
-        #     await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
-        #     return
+        if response.status_code != 200:
+            await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
+            return
         edit.fill_img(response)
         await ctx.send('**Your current profile.**', file=discord.File(f'cogs/img/out/{tag}.png'))
 
