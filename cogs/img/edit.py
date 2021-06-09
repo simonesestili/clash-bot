@@ -9,7 +9,7 @@ BLACK = (0,0,0)
  
 
 def fill_img(profile):
-    my_image = Image.open('template.png')
+    my_image = Image.open('cogs/img/work/template.png')
     font_str = 'font.ttf'
     urllib.request.urlretrieve(profile['clan']['badgeUrls']['large'], 'cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
     clan_badge_img = Image.open('cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
