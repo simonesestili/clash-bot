@@ -5,9 +5,6 @@ from discord.ext import commands
 import psycopg2
 from PIL import Image, ImageFont, ImageDraw
 import numpy as np
-import json
-import urllib.request
-from cogs.img import edit
 from cogs.SQL import postgresql
 
 headers = {
@@ -66,8 +63,12 @@ class Profile(commands.Cog):
         if response.status_code != 200:
             await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
             return
-        edit.fill_img(response.json())
-        await ctx.send('**Your current profile.**', file=discord.File(f'cogs/img/out/{tag}.png'))
+
+        profile = response.json()
+        profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**')
+
+        await ctx.send(embed=embedVar)
+        
 
 
 def setup(bot):
