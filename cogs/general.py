@@ -13,5 +13,11 @@ class General(commands.Cog):
         await ctx.send(f'Pong! {round(1000 * ctx.bot.latency)}ms')
 
 
+    @commands.command(aliases=['purge'])
+    @commands.has_permissions(manage_messages=True)
+    async def clear(self, ctx, amount=50):
+        await ctx.channel.purge(limit=amount+1)
+
+
 def setup(bot):
     bot.add_cog(General(bot))

@@ -1,7 +1,6 @@
 import psycopg2
 import os
 from discord.ext import commands
-pass
 
 
 def insert_player(id, tag):

@@ -11,11 +11,11 @@ BLACK = (0,0,0)
 def fill_img(profile):
     my_image = Image.open('template.png')
     font_str = 'font.ttf'
-    urllib.request.urlretrieve(profile['clan']['badgeUrls']['large'], profile['clan']['badgeUrls']['large'][47:])
-    urllib.request.urlretrieve(profile['league']['iconUrls']['medium'], profile['league']['iconUrls']['medium'][48:])
-    clan_badge_img = Image.open(profile['clan']['badgeUrls']['large'][47:])
+    urllib.request.urlretrieve(profile['clan']['badgeUrls']['large'], 'cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
+    urllib.request.urlretrieve(profile['league']['iconUrls']['medium'], 'cogs/img/work/' + profile['league']['iconUrls']['medium'][48:])
+    clan_badge_img = Image.open('cogs/img/work/' + profile['clan']['badgeUrls']['large'][47:])
     clan_badge_img = clan_badge_img.resize((int(clan_badge_img.size[0] * 0.5),int(clan_badge_img.size[1] * 0.5)), 0)
-    league_badge_img = Image.open(profile['league']['iconUrls']['medium'][48:])
+    league_badge_img = Image.open('cogs/img/work/' + profile['league']['iconUrls']['medium'][48:])
     league_badge_img = league_badge_img.resize((int(league_badge_img.size[0] * 0.64),int(league_badge_img.size[1] * 0.64)), 0)
     image_editable = ImageDraw.Draw(my_image)
     color=(255,255,255)
@@ -62,6 +62,6 @@ def fill_img(profile):
     my_image.paste(league_badge_img, (823, 16), league_badge_img)
 
     tag = profile['tag']
-    my_image.save(f'{tag}.png')
+    my_image.save(f'cogs/img/out/{tag}.png')
 
 
