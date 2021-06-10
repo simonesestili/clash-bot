@@ -8,6 +8,9 @@ import numpy as np
 from cogs.SQL import postgresql
 from cogs.utils import util
 
+os.environ['http_proxy'] = os.environ.get('FIXIE_URL', '')
+os.environ['https_proxy'] = os.environ.get('FIXIE_URL', '')
+
 headers = {
     'Accept': 'application/json',
     'authorization': 'Bearer ' + os.environ['COC_TOKEN']
@@ -118,6 +121,31 @@ class Profile(commands.Cog):
             tag=profile['tag']
             ))
         await ctx.send(embed=profile_embed)
+
+    
+    # @commands.command()
+    # async def units(self, ctx, tag=''):
+    #     if tag.startswith('#'): tag = tag[1:]
+    #     if not tag:
+    #         tag = postgresql.select_player_id(ctx.author.id)[0]
+        
+    #     response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+        
+    #     if response.status_code != 200:
+    #         await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid tag following the profile command.**')
+    #         return
+
+    #     with open('txt/units.txt', 'r') as f:
+    #         text = f.read()
+
+    #     profile = response.json()
+    #     hero_lvls = util.get_heroes(profile['heroes'])
+    #     profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description='')
+    #     profile_embed.add_field(name='**Troops**', value=text.format(
+            
+
+    #     ))
+    #     await ctx.send(embed=profile_embed)
         
 
 

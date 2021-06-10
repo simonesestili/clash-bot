@@ -6,6 +6,9 @@ import psycopg2
 from cogs.SQL import postgresql
 from cogs.utils import util
 
+os.environ['http_proxy'] = os.environ.get('FIXIE_URL', '')
+os.environ['https_proxy'] = os.environ.get('FIXIE_URL', '')
+
 headers = {
     'Accept': 'application/json',
     'authorization': 'Bearer ' + os.environ['COC_TOKEN']
