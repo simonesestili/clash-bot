@@ -58,15 +58,14 @@ class Profile(commands.Cog):
 
     @commands.command(aliases=['PROFILE'])
     async def profile(self, ctx, tag=''):
-        if tag.startswith('#'): tag = tag[1:]
-        if not tag:
-            tag = postgresql.select_player_id(ctx.author.id)
-        
+        if tag.startswith('#'): tag = tag[1:]    
+        tag = postgresql.select_player_id(ctx.author.id)    
         if not tag:
             await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the profile command.**')
             return
 
-        response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+        
+        response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag[0]}', headers=headers)
         
         if response.status_code != 200:
             await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the profile command.**')
@@ -103,15 +102,14 @@ class Profile(commands.Cog):
     
     @commands.command(aliases=['BUILDER'])
     async def builder(self, ctx, tag=''):
-        if tag.startswith('#'): tag = tag[1:]
-        if not tag:
-            tag = postgresql.select_player_id(ctx.author.id)
-
+        if tag.startswith('#'): tag = tag[1:]    
+        tag = postgresql.select_player_id(ctx.author.id)    
         if not tag:
             await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the builder command.**')
             return
 
-        response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+        
+        response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag[0]}', headers=headers)
         
         if response.status_code != 200:
             await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the builder command.**')
