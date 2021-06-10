@@ -43,7 +43,10 @@ class Profile(commands.Cog):
 
     @commands.command()
     async def linked(self, ctx):
-        tag = postgresql.select_player_id(ctx.author.id)[0]
+        if postgresql.select_player_id(ctx.author.id):
+            tag = postgresql.select_player_id(ctx.author.id)[0]
+        else:
+            tag = None
         if tag == None:
             await ctx.send('**You currently have no clash of clans profile linked.**')
             return
@@ -57,12 +60,16 @@ class Profile(commands.Cog):
     async def profile(self, ctx, tag=''):
         if tag.startswith('#'): tag = tag[1:]
         if not tag:
-            tag = postgresql.select_player_id(ctx.author.id)[0]
+            tag = postgresql.select_player_id(ctx.author.id)
         
+        if not tag:
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the profile command.**')
+            return
+
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
         
         if response.status_code != 200:
-            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid tag following the profile command.**')
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the profile command.**')
             return
 
         with open('txt/profile.txt', 'r') as f:
@@ -98,12 +105,16 @@ class Profile(commands.Cog):
     async def builder(self, ctx, tag=''):
         if tag.startswith('#'): tag = tag[1:]
         if not tag:
-            tag = postgresql.select_player_id(ctx.author.id)[0]
+            tag = postgresql.select_player_id(ctx.author.id)
+
+        if not tag:
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the builder command.**')
+            return
 
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
         
         if response.status_code != 200:
-            await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the builder command.**')
             return
 
         with open('txt/builder_profile.txt', 'r') as f:

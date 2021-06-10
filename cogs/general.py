@@ -11,8 +11,12 @@ class General(commands.Cog):
     #COMMAND
     @commands.command()
     async def unlink(self, ctx):
-        postgresql.unlink_user(ctx.author.id)
-        await ctx.send('**Successfully unlinked your account.**')
+        if not postgresql.select_player_id(ctx.author.id):
+            await ctx.send('**You currently have no clash of clans account linked.**')    
+        else:   
+            postgresql.unlink_user(ctx.author.id)
+            await ctx.send('**Successfully unlinked your account.**')  
+        
 
 
     @commands.command()
