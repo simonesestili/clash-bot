@@ -39,14 +39,8 @@ class Profile(commands.Cog):
 
 
     @commands.command()
-    async def unlink(self, ctx):
-        postgresql.unlink_user(ctx.author.id)
-        await ctx.send('**Successfully unlinked your account.**')
-
-
-    @commands.command()
-    async def linked(self, ctx):
-        tag = postgresql.select_id(ctx.author.id)[0]
+    async def linkedp(self, ctx):
+        tag = postgresql.select_player_id(ctx.author.id)[0]
         if tag == None:
             await ctx.send('**You currently have no clash of clans profile linked.**')
             return
@@ -57,16 +51,20 @@ class Profile(commands.Cog):
 
 
     @commands.command(aliases=['PROFILE'])
-    async def profile(self, ctx):
-        tag = postgresql.select_id(ctx.author.id)[0]
+    async def profile(self, ctx, tag=''):
+        if tag.startswith('#'): tag = tag[1:]
+        if not tag:
+            tag = postgresql.select_player_id(ctx.author.id)[0]
+        
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
         
         if response.status_code != 200:
-            await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
+            await ctx.send('**Please link a valid player tag with the \'linkp\' command or enter a valid tag following the profile command.**')
             return
 
         with open('txt/profile.txt', 'r') as f:
             text = f.read()
+
         profile = response.json()
         hero_lvls = util.get_heroes(profile['heroes'])
         profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
@@ -94,8 +92,11 @@ class Profile(commands.Cog):
         
     
     @commands.command(aliases=['BUILDER'])
-    async def builder(self, ctx):
-        tag = postgresql.select_id(ctx.author.id)[0]
+    async def builder(self, ctx, tag=''):
+        if tag.startswith('#'): tag = tag[1:]
+        if not tag:
+            tag = postgresql.select_player_id(ctx.author.id)[0]
+
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
         
         if response.status_code != 200:
