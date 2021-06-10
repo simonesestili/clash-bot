@@ -18,24 +18,59 @@ def get_th(th_lvl):
 def get_trophy(profile):
     name = profile['league']['name']
     if name == None: return ':UnrankedLeague:852342970451886080'
-    elif name[1:3] == 'Leg': return ':LegendLeague:852342969804914709'
-    elif name[1:3] == 'Tit': return ':TitanLeague:852342970149371915'
-    elif name[1:3] == 'Cha': return ':ChampionLeague:852342970317537360'
-    elif name[1:3] == 'Mas': return ':MasterLeague:852342970295517244'
-    elif name[1:3] == 'Cry': return ':CrystalLeague:852342970384384040'
-    elif name[1:3] == 'Gol': return ':GoldLeague:852342970119356460'
-    elif name[1:3] == 'Sil': return ':SilverLeague:852342970522140742'
+    elif name[0:3] == 'Leg': return ':LegendLeague:852342969804914709'
+    elif name[0:3] == 'Tit': return ':TitanLeague:852342970149371915'
+    elif name[0:3] == 'Cha': return ':ChampionLeague:852342970317537360'
+    elif name[0:3] == 'Mas': return ':MasterLeague:852342970295517244'
+    elif name[0:3] == 'Cry': return ':CrystalLeague:852342970384384040'
+    elif name[0:3] == 'Gol': return ':GoldLeague:852342970119356460'
+    elif name[0:3] == 'Sil': return ':SilverLeague:852342970522140742'
     else: return ':BronzeLeague:852342970472202270'
+
+
+def best_trophy(trophies):
+    if trophies >= 5000: return ':LegendLeague:852342969804914709'
+    elif trophies >= 4100: return ':TitanLeague:852342970149371915'
+    elif trophies >= 3200: return ':ChampionLeague:852342970317537360'
+    elif trophies >= 2600: return ':MasterLeague:852342970295517244'
+    elif trophies >= 2000: return ':CrystalLeague:852342970384384040'
+    elif trophies >= 1400: return ':GoldLeague:852342970119356460'
+    elif trophies >= 800: return ':SilverLeague:852342970522140742'
+    elif trophies >= 400: return ':LegendLeague:852342969804914709'
+    else: return ':BronzeLeague:852342970472202270'
+
+
+def builder_emoji(bh_lvl):
+    if bh_lvl == 9: return ':BuilderHall9:852397167934046269'
+    elif bh_lvl == 8: return ':BuilderHall8:852397167942828072'
+    elif bh_lvl == 7: return ':BuilderHall7:852397167904817192'
+    elif bh_lvl == 6: return ':BuilderHall6:852397167993290772'
+    elif bh_lvl == 5: return ':BuilderHall5:852397167933915146'
+    elif bh_lvl == 4: return ':BuilderHall4:852397167959212062'
+    elif bh_lvl == 3: return ':BuilderHall3:852397168002334740'
+    elif bh_lvl == 2: return ':BuilderHall2:852397167951609926'
+    else: return ':BuilderHall1:852397167909666896'
 
 
 def get_heroes(heroes):
     lvls = [0,0,0,0]
     for hero in heroes:
-        if hero['name'][1:2] == 'Ba':
+        hero_name = hero['name']
+
+        if hero_name[0:3] == 'Bar':
             lvls[0] = hero['level']
-        elif hero['name'][1:2] == 'Ar':
+        elif hero_name[0:2] == 'Ar':
             lvls[1] = hero['level']
-        elif hero['name'][1:2] == 'Gr':
+        elif hero_name[0:2] == 'Gr':
             lvls[2] = hero['level']
-        else:
+        elif hero_name[0:2] == 'Ro':
             lvls[3] = hero['level']
+    return lvls
+
+
+def battle_machine(profile):
+    heroes = profile['heroes']
+    for hero in heroes:
+        if hero['name'] == 'Battle Machine':
+            return hero['level']
+    return 0

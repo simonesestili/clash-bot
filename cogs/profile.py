@@ -56,7 +56,7 @@ class Profile(commands.Cog):
 
 
 
-    @commands.command()
+    @commands.command(aliases=['PROFILE'])
     async def profile(self, ctx):
         tag = postgresql.select_id(ctx.author.id)[0]
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
@@ -68,30 +68,55 @@ class Profile(commands.Cog):
         with open('txt/profile.txt', 'r') as f:
             text = f.read()
         profile = response.json()
-        heroes = util.get_heroes(profile['heroes'])
+        hero_lvls = util.get_heroes(profile['heroes'])
         profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
             lvl=profile['expLevel'], 
             th_emoji=util.get_th(profile['townHallLevel']), 
             th_lvl=profile['townHallLevel'], 
             trophy_emoji=util.get_trophy(profile),
             trophies=profile['trophies'],
-            best_trophy_emoji=util.get_trophy(profile),
+            best_trophy_emoji=util.best_trophy(profile['bestTrophies']),
             best_trophies=profile['bestTrophies'],
             clan_name=profile['clan']['name'],
             role=profile['role'].capitalize(),
             stars=profile['warStars'],
-            barb_lvl=heroes[0],
-            queen_lvl=heroes[1],
-            grand_lvl=heroes[2],
-            royal_lvl=heroes[3],
+            barb_lvl=hero_lvls[0],
+            queen_lvl=hero_lvls[1],
+            grand_lvl=hero_lvls[2],
+            royal_lvl=hero_lvls[3],
             troops_donated=profile['donations'],
             troops_received=profile['donationsReceived'],
             attacks_won=profile['attackWins'],
-            defense_wins=profile['defenseWins']
+            defenses_won=profile['defenseWins'],
+            tag=profile['tag'][1:]
             ))
         await ctx.send(embed=profile_embed)
-
+        
     
+    @commands.command(aliases=['BUILDER'])
+    async def builder(self, ctx):
+        tag = postgresql.select_id(ctx.author.id)[0]
+        response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+        
+        if response.status_code != 200:
+            await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
+            return
+
+        with open('txt/builder_profile.txt', 'r') as f:
+            text = f.read()
+        profile = response.json()
+
+        profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
+            lvl=profile['expLevel'], 
+            bh_lvl=profile['builderHallLevel'],
+            bh_trophies=profile['versusTrophies'],
+            best_bh_trophies=profile['bestVersusTrophies'],
+            builder_emoji=util.builder_emoji(profile['builderHallLevel']),
+            bm_lvl=util.battle_machine(profile),
+            builder_wins=profile['versusBattleWins'],
+            tag=profile['tag']
+            ))
+        await ctx.send(embed=profile_embed)
         
 
 

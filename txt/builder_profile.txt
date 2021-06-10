@@ -1,0 +1,9 @@
+
+<:exp:852342970300366860> **Exp Level:** {lvl}
+<{builder_emoji}> **Builder Hall Level:** {bh_lvl}
+<:BuilderTrophy:852396060198174730> **Builder Trophies:** {bh_trophies}
+<:BuilderTrophy:852396060198174730> **Best Builder Trophies:** {best_bh_trophies}
+<:BattleMachine30:852397943058595950> **Battle Machine Level:** {bm_lvl}
+:crossed_swords: **Versus Battle Wins:** {builder_wins}
+
+[Open in Clash of Clans](https://link.clashofclans.com/en?action=OpenPlayerProfile&tag=%23{tag})
