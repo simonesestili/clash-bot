@@ -1,0 +1,5 @@
+<{th}> **Town Hall Average:** {th_avg}
+<:Trophy:852436852408320011> **Trophy Average:** {trophy_avg}
+<:BuilderTrophy:852396060198174730>**Versus Trophy Average:** {vs_trophy_avg}
+<:exp:852342970300366860> **Exp Level Average:** {exp_avg}
+:arrow_up: **Donations Average:** {dono_avg}

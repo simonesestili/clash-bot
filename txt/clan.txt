@@ -1,0 +1,13 @@
+:notepad_spiral: **Description:** {desc}
+<:ClanXP:852435996313911296> **Clan Level:** {lvl}
+<:LeagueMedal:852436453580341278> **Clan War League:** {cwl}
+:clipboard: **Total Points:** <:Trophy:852436852408320011> {clan_pts} **|** <:BuilderTrophy:852396060198174730> {versus_pts}
+:map: **Clan Location:** {location}
+<:Lang:852437910439460874> **Clan Language:** {lang}
+:clipboard: **Type:** {type}
+:clipboard: **Required Trophies:** <:Trophy:852436852408320011> {clan_required_trophies} **|** <:BuilderTrophy:852396060198174730> {versus_required_trophies}
+<{th}> **Required Town Hall Level:** {req_th}
+:chart_with_upwards_trend: **Wars Won:** {war_wins}
+:chart_with_downwards_trend: **Wars Lost:** {war_losses}
+<:Tie:852442602632118312> **Wars Tied:** {war_ties}
+:crossed_swords: **War Frequency:** {war_frequency}

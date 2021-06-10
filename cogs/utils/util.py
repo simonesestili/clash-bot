@@ -1,3 +1,11 @@
+import requests
+import os 
+
+headers = {
+    'Accept': 'application/json',
+    'authorization': 'Bearer ' + os.environ['COC_TOKEN']
+}
+
 def get_th(th_lvl):
     if th_lvl == 14: return ':TownHall14:852342970501693470'
     if th_lvl == 13: return ':TownHall13:852342970274545666'
@@ -74,3 +82,10 @@ def battle_machine(profile):
         if hero['name'] == 'Battle Machine':
             return hero['level']
     return 0
+
+
+def th_by_tag(tag):
+    response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+    if response.status_code != 200:
+        return None
+    return response.json()['townHallLevel']

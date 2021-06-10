@@ -37,16 +37,6 @@ def select_player_id(id):
     return tag
 
 
-def select_clan_id(id):
-    conn = psycopg2.connect(dbname=os.environ['DB_NAME'], user=os.environ['DB_USER'], password=os.environ['DB_PASS'], host=os.environ['DB_HOST'])
-    with conn:
-        with conn.cursor() as cur:
-            cur.execute(f'SELECT clan_tag FROM user_tags WHERE discord_id = \'{id}\'')
-            tag = cur.fetchone()
-    conn.close()
-    return tag
-
-
 def unlink_user(id):
     conn = psycopg2.connect(dbname=os.environ['DB_NAME'], user=os.environ['DB_USER'], password=os.environ['DB_PASS'], host=os.environ['DB_HOST'])
     with conn:

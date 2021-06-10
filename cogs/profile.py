@@ -24,7 +24,7 @@ class Profile(commands.Cog):
 
     #COMMANDS
     @commands.command(aliases=['linkprofile', 'LINKP', 'LINKPROFILE'])
-    async def linkp(self, ctx, tag=''):
+    async def link(self, ctx, tag=''):
         tag = tag.upper()
         if tag.startswith('#'):
             tag = tag[1:]
@@ -39,7 +39,7 @@ class Profile(commands.Cog):
 
 
     @commands.command()
-    async def linkedp(self, ctx):
+    async def linked(self, ctx):
         tag = postgresql.select_player_id(ctx.author.id)[0]
         if tag == None:
             await ctx.send('**You currently have no clash of clans profile linked.**')
@@ -59,7 +59,7 @@ class Profile(commands.Cog):
         response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
         
         if response.status_code != 200:
-            await ctx.send('**Please link a valid player tag with the \'linkp\' command or enter a valid tag following the profile command.**')
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid tag following the profile command.**')
             return
 
         with open('txt/profile.txt', 'r') as f:
