@@ -6,6 +6,7 @@ import psycopg2
 from PIL import Image, ImageFont, ImageDraw
 import numpy as np
 from cogs.SQL import postgresql
+from cogs.utils import util
 
 headers = {
     'Accept': 'application/json',
@@ -64,10 +65,33 @@ class Profile(commands.Cog):
             await ctx.send('Plese link a valid player tag with the \'linkp\' command.')
             return
 
+        with open('txt/profile.txt', 'r') as f:
+            text = f.read()
         profile = response.json()
-        profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**')
+        heroes = util.get_heroes(profile['heroes'])
+        profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
+            lvl=profile['expLevel'], 
+            th_emoji=util.get_th(profile['townHallLevel']), 
+            th_lvl=profile['townHallLevel'], 
+            trophy_emoji=util.get_trophy(profile),
+            trophies=profile['trophies'],
+            best_trophy_emoji=util.get_trophy(profile),
+            best_trophies=profile['bestTrophies'],
+            clan_name=profile['clan']['name'],
+            role=profile['role'].capitalize(),
+            stars=profile['warStars'],
+            barb_lvl=heroes[0],
+            queen_lvl=heroes[1],
+            grand_lvl=heroes[2],
+            royal_lvl=heroes[3],
+            troops_donated=profile['donations'],
+            troops_received=profile['donationsReceived'],
+            attacks_won=profile['attackWins'],
+            defense_wins=profile['defenseWins']
+            ))
+        await ctx.send(embed=profile_embed)
 
-        await ctx.send(embed=embedVar)
+    
         
 
 

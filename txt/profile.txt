@@ -1,0 +1,15 @@
+<:exp:852342970300366860> **Exp Level:** {lvl}
+<{th_emoji}> **Town Hall Level:** {th_lvl} <{th_emoji}>
+<{trophy_emoji}> **Current Trophies:** {trophies}
+<{best_trophy_emoji}> **Best Trophies:** {best_trophies}
+<:ClanCastle1:852342970568671312> **Clan:** {clan_name}
+<:role:852369337662439455> **Role:** {role}
+:star: **War Stars Earned:** {stars}
+<:BarbarianKing:852342970644037673> **{barb_lvl} | <:ArcherQueen:852342970673659914> {queen_lvl} | <:GrandWarden:852342970668548157> {grand_lvl} | <:RoyalChampion:852342971185364992> {royal_lvl}**
+<:uparw:852342970271399996> **Troops Donated:** {troops_donated}
+<:downarw:852342970078593124> **Troops Received:** {troops_received}
+:crossed_swords: **Attacks Won:** {attacks_won}
+:shield: **Defenses Won:** {defenses_won}
+
+
+
