@@ -1,0 +1,33 @@
+{
+    "buildings": {
+        "townHall":{
+            "1": "https://static.wikia.nocookie.net/clashofclans/images/f/fd/Town_Hall1.png/revision/latest/scale-to-width-down/100?cb=20170827034930",
+            "2": "https://static.wikia.nocookie.net/clashofclans/images/7/7d/Town_Hall2.png/revision/latest/scale-to-width-down/100?cb=20170827050036",
+            "3": "https://static.wikia.nocookie.net/clashofclans/images/d/dd/Town_Hall3.png/revision/latest/scale-to-width-down/100?cb=20170827050050",
+            "4": "https://static.wikia.nocookie.net/clashofclans/images/e/e7/Town_Hall4.png/revision/latest/scale-to-width-down/100?cb=20170827050104",
+            "5": "https://static.wikia.nocookie.net/clashofclans/images/a/a3/Town_Hall5.png/revision/latest/scale-to-width-down/100?cb=20170827050118",
+            "6": "https://static.wikia.nocookie.net/clashofclans/images/5/52/Town_Hall6.png/revision/latest/scale-to-width-down/100?cb=20170827050220",
+            "7": "https://static.wikia.nocookie.net/clashofclans/images/7/75/Town_Hall7.png/revision/latest/scale-to-width-down/100?cb=20170827051024",
+            "8": "https://static.wikia.nocookie.net/clashofclans/images/f/fa/Town_Hall8.png/revision/latest/scale-to-width-down/100?cb=20170827051039",
+            "9": "https://static.wikia.nocookie.net/clashofclans/images/e/e0/Town_Hall9.png/revision/latest/scale-to-width-down/100?cb=20170827045259",
+            "10": "https://static.wikia.nocookie.net/clashofclans/images/5/5c/Town_Hall10.png/revision/latest/scale-to-width-down/115?cb=20170827040043",
+            "11": "https://static.wikia.nocookie.net/clashofclans/images/9/96/Town_Hall11.png/revision/latest/scale-to-width-down/110?cb=20210410001514",
+            "12": "https://static.wikia.nocookie.net/clashofclans/images/0/06/Giga_Tesla5.png/revision/latest/scale-to-width-down/120?cb=20180606163859",
+            "13": "https://static.wikia.nocookie.net/clashofclans/images/0/0f/Giga_Inferno5.png/revision/latest/scale-to-width-down/120?cb=20200831024430",
+            "14": "https://static.wikia.nocookie.net/clashofclans/images/4/48/Giga_Inferno14-5.png/revision/latest/scale-to-width-down/120?cb=20210413000602"
+        }
+    },    
+    "troops": {
+
+    },
+    "dark troops": {
+
+    },
+    "heroes": {
+
+    },
+    "spells": {
+
+    }
+
+}
