@@ -298,8 +298,8 @@ class Clash(commands.Cog):
 
 
     @commands.command()
-    async def ballon(self, ctx, level):
-        name = 'ballon'
+    async def balloon(self, ctx, level):
+        name = 'balloon'
         if level not in self.data['home']['troops'][name]: return
 
         await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Balloon', level))
