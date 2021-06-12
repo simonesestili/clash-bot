@@ -46,7 +46,7 @@ class Clash(commands.Cog):
         name = 'archerTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Archer_Tower', level))
 
 
     @commands.command()
@@ -54,7 +54,7 @@ class Clash(commands.Cog):
         name = 'mortar'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Mortar', level))
 
 
     @commands.command()
@@ -62,7 +62,7 @@ class Clash(commands.Cog):
         name = 'airDefense'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Air_Defense', level))
 
     
     @commands.command()
@@ -70,7 +70,7 @@ class Clash(commands.Cog):
         name = 'wizardTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Wizard_Tower', level))
 
     
     @commands.command()
@@ -78,7 +78,7 @@ class Clash(commands.Cog):
         name = 'airSweeper'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Air_Sweeper', level))
 
     
     @commands.command()
@@ -86,7 +86,7 @@ class Clash(commands.Cog):
         name = 'hiddenTesla'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Hidden_Tesla/Home_Village', level))
 
     
     @commands.command()
@@ -94,7 +94,7 @@ class Clash(commands.Cog):
         name = 'bombTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Bomb_Tower', level))
 
     
     @commands.command()
@@ -102,7 +102,7 @@ class Clash(commands.Cog):
         name = 'xBow'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/X-Bow', level))
 
     
     @commands.command()
@@ -110,7 +110,7 @@ class Clash(commands.Cog):
         name = 'infernoTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Inferno_Tower', level))
 
     
     @commands.command()
@@ -118,7 +118,7 @@ class Clash(commands.Cog):
         name = 'eagleArtillery'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Eagle_Artillery', level))
 
     
     @commands.command()
@@ -126,7 +126,7 @@ class Clash(commands.Cog):
         name = 'scattershot'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Scattershot', level))
 
     
     @commands.command()
@@ -134,7 +134,7 @@ class Clash(commands.Cog):
         name = 'wall'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['defenses'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Walls/Home_Village', level))
 
     
     @commands.command()
@@ -142,7 +142,7 @@ class Clash(commands.Cog):
         name = 'goldMine'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Gold_Mine/Home_Village', level))
 
     
     @commands.command()
@@ -150,7 +150,7 @@ class Clash(commands.Cog):
         name = 'goldStorage'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Gold_Storage/Home_Village', level))
 
     
     @commands.command()
@@ -158,7 +158,7 @@ class Clash(commands.Cog):
         name = 'elixirCollector'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Elixir_Collector/Home_Village', level))
 
     
     @commands.command()
@@ -166,7 +166,7 @@ class Clash(commands.Cog):
         name = 'elixirStorage'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Elixir_Storage/Home_Village', level))
 
     
     @commands.command()
@@ -174,7 +174,7 @@ class Clash(commands.Cog):
         name = 'darkElixirDrill'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Elixir_Drill', level))
 
     
     @commands.command()
@@ -182,7 +182,7 @@ class Clash(commands.Cog):
         name = 'darkElixirStorage'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Elixir_Storage', level))
 
     
     @commands.command()
@@ -190,7 +190,7 @@ class Clash(commands.Cog):
         name = 'clanCastle'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['resources'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Clan_Castle', level))
 
     
     @commands.command()
@@ -198,7 +198,7 @@ class Clash(commands.Cog):
         name = 'armyCamp'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Army_Camp/Home_Village', level))
 
     
     @commands.command()
@@ -206,7 +206,7 @@ class Clash(commands.Cog):
         name = 'barracks'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Barracks', level))
 
     
     @commands.command()
@@ -214,7 +214,7 @@ class Clash(commands.Cog):
         name = 'darkBarracks'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Barracks', level))
 
     
     @commands.command()
@@ -222,7 +222,7 @@ class Clash(commands.Cog):
         name = 'laboratory'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Laboratory', level))
 
     
     @commands.command()
@@ -230,7 +230,7 @@ class Clash(commands.Cog):
         name = 'spellFactory'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Spell_Factory', level))
 
     
     @commands.command()
@@ -238,7 +238,7 @@ class Clash(commands.Cog):
         name = 'darkSpellFactory'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Spell_Factory', level))
 
     
     @commands.command()
@@ -246,7 +246,7 @@ class Clash(commands.Cog):
         name = 'workshop'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Workshop', level))
 
     
     @commands.command()
@@ -254,7 +254,7 @@ class Clash(commands.Cog):
         name = 'petHouse'
         if level not in self.data['home']['buildings']['army'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['buildings']['army'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Pet_House', level))
 
 
     @commands.command()
@@ -262,7 +262,7 @@ class Clash(commands.Cog):
         name = 'barbarian'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Barbarian', level))
 
 
     @commands.command()
@@ -270,7 +270,7 @@ class Clash(commands.Cog):
         name = 'archer'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Archer', level))
 
 
     @commands.command()
@@ -278,7 +278,7 @@ class Clash(commands.Cog):
         name = 'giant'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Giant', level))
 
 
     @commands.command()
@@ -286,7 +286,7 @@ class Clash(commands.Cog):
         name = 'goblin'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Goblin', level))
 
 
     @commands.command()
@@ -294,7 +294,7 @@ class Clash(commands.Cog):
         name = 'wallBreaker'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Wall_Breaker', level))
 
 
     @commands.command()
@@ -302,7 +302,7 @@ class Clash(commands.Cog):
         name = 'ballon'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Balloon', level))
 
 
     @commands.command()
@@ -310,7 +310,7 @@ class Clash(commands.Cog):
         name = 'wizard'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Wizard', level))
 
 
     @commands.command()
@@ -318,7 +318,7 @@ class Clash(commands.Cog):
         name = 'healer'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Healer', level))
 
 
     @commands.command()
@@ -326,7 +326,7 @@ class Clash(commands.Cog):
         name = 'dragon'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Dragon', level))
 
 
     @commands.command()
@@ -334,7 +334,7 @@ class Clash(commands.Cog):
         name = 'pekka'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/P.E.K.K.A', level))
 
 
     @commands.command()
@@ -342,7 +342,7 @@ class Clash(commands.Cog):
         name = 'babyDragon'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Baby_Dragon/Home_Village', level))
 
 
     @commands.command()
@@ -350,7 +350,7 @@ class Clash(commands.Cog):
         name = 'miner'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Miner', level))
 
 
     @commands.command()
@@ -358,7 +358,7 @@ class Clash(commands.Cog):
         name = 'electroDragon'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Electro_Dragon', level))
 
 
     @commands.command()
@@ -366,7 +366,7 @@ class Clash(commands.Cog):
         name = 'yeti'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Yeti', level))
 
 
     @commands.command()
@@ -374,7 +374,7 @@ class Clash(commands.Cog):
         name = 'minion'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Minion', level))
 
 
     @commands.command()
@@ -382,7 +382,7 @@ class Clash(commands.Cog):
         name = 'hogRider'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Hog_Rider', level))
 
         
     @commands.command()
@@ -390,7 +390,7 @@ class Clash(commands.Cog):
         name = 'valkyrie'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Valkyrie', level))
 
         
     @commands.command()
@@ -398,7 +398,7 @@ class Clash(commands.Cog):
         name = 'golem'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Golem', level))
 
         
     @commands.command()
@@ -406,7 +406,7 @@ class Clash(commands.Cog):
         name = 'witch'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Witch', level))
 
         
     @commands.command()
@@ -414,7 +414,7 @@ class Clash(commands.Cog):
         name = 'lavaHound'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Lava_Hound', level))
 
         
     @commands.command()
@@ -422,7 +422,7 @@ class Clash(commands.Cog):
         name = 'bowler'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Bowler', level))
 
 
     @commands.command()
@@ -430,7 +430,7 @@ class Clash(commands.Cog):
         name = 'iceGolem'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Ice_Golem', level))
 
 
     @commands.command()
@@ -438,7 +438,7 @@ class Clash(commands.Cog):
         name = 'headhunter'
         if level not in self.data['home']['troops'][name]: return
 
-        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), '', level))
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Headhunter', level))
 
         
     
