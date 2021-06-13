@@ -612,6 +612,20 @@
             "superValkyrie": "https://static.wikia.nocookie.net/clashofclans/images/2/25/Super_Valkyrie_Info.png/revision/latest/scale-to-width-down/300?cb=20201011215025",
             "superWitch": "https://static.wikia.nocookie.net/clashofclans/images/7/7c/Super_Witch_info.png/revision/latest/scale-to-width-down/262?cb=20200904092133",
             "iceHound": "https://static.wikia.nocookie.net/clashofclans/images/2/29/Ice_Hound_info.png/revision/latest/scale-to-width-down/250?cb=20201211021126"
+        },
+        "spells": {
+            "lightning": "https://static.wikia.nocookie.net/clashofclans/images/c/c0/Lightning_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20210106011434",
+            "healing": "https://static.wikia.nocookie.net/clashofclans/images/f/f2/Healing_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20171008204028",
+            "rage": "https://static.wikia.nocookie.net/clashofclans/images/8/8a/Rage_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20171008204108",
+            "jump": "https://static.wikia.nocookie.net/clashofclans/images/3/38/Jump_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20200913023217",
+            "freeze": "https://static.wikia.nocookie.net/clashofclans/images/e/ef/Freeze_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20180627210930",
+            "clone": "https://static.wikia.nocookie.net/clashofclans/images/9/91/Clone_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20200913194701",
+            "invisibility": "https://static.wikia.nocookie.net/clashofclans/images/a/a3/Invisibility_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20201207184352",
+            "poison": "https://clashofclans.fandom.com/wiki/Poison_Spell",
+            "earthquake": "https://clashofclans.fandom.com/wiki/Earthquake_Spell",
+            "haste": "https://clashofclans.fandom.com/wiki/Haste_Spell",
+            "skeleton": "https://clashofclans.fandom.com/wiki/Skeleton_Spell",
+            "bat": "https://clashofclans.fandom.com/wiki/Bat_Spell"
         }
     },
 

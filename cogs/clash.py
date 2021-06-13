@@ -10,8 +10,11 @@ class Clash(commands.Cog):
             self.data = json.load(f)
 
 
-    def embed(self, data, name, url, level):
-        embed = discord.Embed(title=f'__{name} {level}__', url=url)
+    def embed(self, data, name, url, level=0):
+        if level == 0:
+            embed = discord.Embed(title=f'__{name}__', url=url)
+        else:
+            embed = discord.Embed(title=f'__{name} {level}__', url=url)
         embed.set_image(url=data)
         return embed
 
@@ -440,17 +443,175 @@ class Clash(commands.Cog):
 
         await ctx.send(embed=self.embed(self.data['home']['troops'][name][level], self.title(name), 'https://clashofclans.fandom.com/wiki/Headhunter', level))
 
-        
-    
+
+    @commands.command()
+    async def superbarbarian(self, ctx):
+        name = 'superBarbarian'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Barbarian'))
 
 
-    
+    @commands.command()
+    async def superarcher(self, ctx):
+        name = 'superArcher'
 
-    
-    
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Archer'))
 
-    
-    
+
+    @commands.command()
+    async def supergiant(self, ctx):
+        name = 'superGiant'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Giant'))
+
+
+    @commands.command()
+    async def sneakygoblin(self, ctx):
+        name = 'sneakyGoblin'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Sneaky_Goblin'))
+
+
+    @commands.command()
+    async def superwallbreaker(self, ctx):
+        name = 'superWallBreaker'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Wall_Breaker'))
+
+
+    @commands.command()
+    async def superwizard(self, ctx):
+        name = 'superWizard'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Wizard'))
+
+
+    @commands.command()
+    async def infernodragon(self, ctx):
+        name = 'infernoDragon'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Inferno_Dragon'))
+
+
+    @commands.command()
+    async def superminion(self, ctx):
+        name = 'superMinion'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Minion'))
+
+
+    @commands.command()
+    async def supervalkyrie(self, ctx):
+        name = 'superValkyrie`'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Valkyrie'))
+
+
+    @commands.command()
+    async def superwitch(self, ctx):
+        name = 'superWitch'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Super_Witch'))
+
+
+    @commands.command()
+    async def icehound(self, ctx):
+        name = 'iceHound'
+
+        await ctx.send(embed=self.embed(self.data['home']['troops'][name], self.title(name), 'https://clashofclans.fandom.com/wiki/Ice_Hound'))
+
+
+    @commands.command()
+    async def lightning(self, ctx):
+        name = 'lightning'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def healing(self, ctx):
+        name = 'healing'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def rage(self, ctx):
+        name = 'rage'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def jump(self, ctx):
+        name = 'jump'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def freeze(self, ctx):
+        name = 'freeze'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def clone(self, ctx):
+        name = 'clone'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def invisibility(self, ctx):
+        name = 'invisibility'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def heal(self, ctx):
+        name = 'heal'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def poison(self, ctx):
+        name = 'poison'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def earthquake(self, ctx):
+        name = 'earthquake'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def haste(self, ctx):
+        name = 'haste'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def skeleton(self, ctx):
+        name = 'skeleton'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
+    @commands.command()
+    async def bat(self, ctx):
+        name = 'bat'
+
+        await ctx.send(embed=self.embed(self.data['home']['spells'][name], self.title(name), ''))
+
+
 
 def setup(bot):
     bot.add_cog(Clash(bot))
