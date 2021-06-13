@@ -21,7 +21,7 @@ class General(commands.Cog):
 
     @commands.command()
     async def ping(self, ctx):
-        await ctx.send(f'Pong! {round(1000 * ctx.bot.latency)}ms')
+        await ctx.send(f'**Pong! {round(1000 * ctx.bot.latency)}ms**')
 
 
     @commands.command(aliases=['purge'])
