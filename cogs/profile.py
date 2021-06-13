@@ -59,7 +59,7 @@ class Profile(commands.Cog):
     @commands.command(aliases=['PROFILE'])
     async def profile(self, ctx, tag=''):
         if tag.startswith('#'): tag = tag[1:]    
-        tag = postgresql.select_player_id(ctx.author.id)    
+        tag = postgresql.select_player_id(ctx.author.id) if not tag else tag
         if not tag:
             await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the profile command.**')
             return
@@ -103,7 +103,7 @@ class Profile(commands.Cog):
     @commands.command(aliases=['BUILDER'])
     async def builder(self, ctx, tag=''):
         if tag.startswith('#'): tag = tag[1:]    
-        tag = postgresql.select_player_id(ctx.author.id)    
+        tag = postgresql.select_player_id(ctx.author.id) if not tag else tag    
         if not tag:
             await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid player tag following the builder command.**')
             return

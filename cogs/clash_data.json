@@ -600,7 +600,18 @@
                 "1": "https://static.wikia.nocookie.net/clashofclans/images/9/98/Headhunter1.png/revision/latest/scale-to-width-down/65?cb=20201013052457",
                 "2": "https://static.wikia.nocookie.net/clashofclans/images/a/a6/Headhunter2.png/revision/latest/scale-to-width-down/65?cb=20201013052522",
                 "3": "https://static.wikia.nocookie.net/clashofclans/images/4/4c/Headhunter3.png/revision/latest/scale-to-width-down/65?cb=20201013052246"
-            }
+            },
+            "superBarbarian": "https://static.wikia.nocookie.net/clashofclans/images/1/1c/Super_Barbarian_info.png/revision/latest/scale-to-width-down/250?cb=20200401065036",
+            "superArcher": "https://static.wikia.nocookie.net/clashofclans/images/e/ea/Super_Archer_info.png/revision/latest/scale-to-width-down/250?cb=20201211020339",
+            "superGiant": "https://static.wikia.nocookie.net/clashofclans/images/d/d9/Super_Giant_info.png/revision/latest/scale-to-width-down/217?cb=20200904092333",
+            "sneakyGoblin": "https://static.wikia.nocookie.net/clashofclans/images/f/ff/Sneaky_Goblin_info.png/revision/latest/scale-to-width-down/250?cb=20201211014521",
+            "superWallBreaker": "https://static.wikia.nocookie.net/clashofclans/images/b/b1/Super_Wall_Breaker_info.png/revision/latest/scale-to-width-down/250?cb=20200829085953",
+            "superWizard": "https://static.wikia.nocookie.net/clashofclans/images/5/5e/Super_Wizard_info.png/revision/latest/scale-to-width-down/250?cb=20201207182215",
+            "infernoDragon": "https://static.wikia.nocookie.net/clashofclans/images/d/de/Inferno_Dragon_info.png/revision/latest/scale-to-width-down/300?cb=20200621070734",
+            "superMinion": "https://static.wikia.nocookie.net/clashofclans/images/8/8e/Super_Minion_info.png/revision/latest/scale-to-width-down/300?cb=20201211015348",
+            "superValkyrie": "https://static.wikia.nocookie.net/clashofclans/images/2/25/Super_Valkyrie_Info.png/revision/latest/scale-to-width-down/300?cb=20201011215025",
+            "superWitch": "https://static.wikia.nocookie.net/clashofclans/images/7/7c/Super_Witch_info.png/revision/latest/scale-to-width-down/262?cb=20200904092133",
+            "iceHound": "https://static.wikia.nocookie.net/clashofclans/images/2/29/Ice_Hound_info.png/revision/latest/scale-to-width-down/250?cb=20201211021126"
         }
     },
 
