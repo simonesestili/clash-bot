@@ -24,7 +24,7 @@ class Profile(commands.Cog):
     def get_troops(self, troops):
         troop_dict = {'Barbarian':'-', 'Archer':'-', 'Giant':'-', 'Goblin':'-', 'Wall Breaker':'-', 'Balloon':'-', 'Wizard':'-', 'Healer':'-', 'Dragon':'-', 'P.E.K.K.A':'-', 'Baby Dragon':'-', 'Miner':'-', 'Electro Dragon':'-', 'Yeti':'-', 'Minion':'-', 'Hog Rider':'-', 'Valkyrie':'-', 'Golem':'-', 'Witch':'-', 'Lava Hound':'-', 'Bowler':'-', 'Ice Golem':'-', 'Headhunter':'-', 'Wall Wrecker':'-', 'Battle Blimp':'-', 'Stone Slammer':'-', 'Siege Barracks':'-', 'Log Launcher':'-', 'Unicorn':'-', 'L.A.S.S.I':'-', 'Mighty Yak':'-', 'Electro Owl':'-'}
         for troop in troops:
-            if troop['name'] in troop_dict:
+            if troop['name'] in troop_dict and troop['village'] == 'home':
                 troop_dict[troop['name']] = str(troop['level'])
         return troop_dict
 
