@@ -626,6 +626,38 @@
             "haste": "https://static.wikia.nocookie.net/clashofclans/images/b/be/Haste_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20171008204612",
             "skeleton": "https://static.wikia.nocookie.net/clashofclans/images/0/0f/Skeleton_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20181211010022",
             "bat": "https://static.wikia.nocookie.net/clashofclans/images/3/3d/Bat_Spell_info.png/revision/latest/scale-to-width-down/200?cb=20181205010820"
+        },
+        "siege": {
+            "wallWreker": {
+                "1": "https://static.wikia.nocookie.net/clashofclans/images/d/d4/Wall_Wrecker1.png/revision/latest/scale-to-width-down/120?cb=20180605200541",
+                "2": "https://static.wikia.nocookie.net/clashofclans/images/9/99/Wall_Wrecker2.png/revision/latest/scale-to-width-down/120?cb=20180605200636",
+                "3": "https://static.wikia.nocookie.net/clashofclans/images/d/d9/Wall_Wrecker3.png/revision/latest/scale-to-width-down/120?cb=20180605200740",
+                "4": "https://static.wikia.nocookie.net/clashofclans/images/2/25/Wall_Wrecker4.png/revision/latest/scale-to-width-down/120?cb=20200905095529"
+            },
+            "battleBlimp": {
+                "1": "https://static.wikia.nocookie.net/clashofclans/images/6/6b/Battle_Blimp1.png/revision/latest/scale-to-width-down/120?cb=20180605200924",
+                "2": "https://static.wikia.nocookie.net/clashofclans/images/b/bd/Battle_Blimp2.png/revision/latest/scale-to-width-down/120?cb=20180605201134",
+                "3": "https://static.wikia.nocookie.net/clashofclans/images/b/b9/Battle_Blimp3.png/revision/latest/scale-to-width-down/120?cb=20180605201226",
+                "4": "https://static.wikia.nocookie.net/clashofclans/images/b/ba/Battle_Blimp4.png/revision/latest/scale-to-width-down/120?cb=20210227025338"
+            },
+            "stoneSlammer": {
+                "1": "https://static.wikia.nocookie.net/clashofclans/images/0/0b/Stone_Slammer1.png/revision/latest/scale-to-width-down/100?cb=20181207045622",
+                "2": "https://static.wikia.nocookie.net/clashofclans/images/4/4e/Stone_Slammer2.png/revision/latest/scale-to-width-down/100?cb=20181207045630",
+                "3": "https://static.wikia.nocookie.net/clashofclans/images/f/f5/Stone_Slammer3.png/revision/latest/scale-to-width-down/100?cb=20181207045639",
+                "4": "https://static.wikia.nocookie.net/clashofclans/images/4/4b/Stone_Slammer4.png/revision/latest/scale-to-width-down/100?cb=20210227024514"
+            },
+            "siegeBarracks": {
+                "1": "https://static.wikia.nocookie.net/clashofclans/images/a/a4/Siege_Barracks1.png/revision/latest/scale-to-width-down/100?cb=20191211223956",
+                "2": "https://static.wikia.nocookie.net/clashofclans/images/1/1f/Siege_Barracks2.png/revision/latest/scale-to-width-down/100?cb=20191211224020",
+                "3": "https://static.wikia.nocookie.net/clashofclans/images/3/3c/Siege_Barracks3.png/revision/latest/scale-to-width-down/100?cb=20191211224038",
+                "4": "https://static.wikia.nocookie.net/clashofclans/images/9/98/Siege_Barracks4.png/revision/latest/scale-to-width-down/100?cb=20191211224117"
+            },
+            "logLauncher": {
+                "1": "https://static.wikia.nocookie.net/clashofclans/images/d/db/Log_Launcher1.png/revision/latest/scale-to-width-down/100?cb=20201208045811",
+                "2": "https://static.wikia.nocookie.net/clashofclans/images/b/b3/Log_Launcher2.png/revision/latest/scale-to-width-down/100?cb=20201208045812",
+                "3": "https://static.wikia.nocookie.net/clashofclans/images/3/3c/Log_Launcher3.png/revision/latest/scale-to-width-down/100?cb=20201208045812",
+                "4": "https://static.wikia.nocookie.net/clashofclans/images/2/2b/Log_Launcher4.png/revision/latest/scale-to-width-down/100?cb=20201208045812"
+            }
         }
     },
 

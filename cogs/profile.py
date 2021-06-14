@@ -22,8 +22,12 @@ class Profile(commands.Cog):
         self.bot = bot
 
     
-    #EVENTS
-    pass
+    def get_troops(self, troops):
+        troop_dict = {'Barbarian':'-', 'Archer':'-', 'Giant':'-', 'Goblin':'-', 'Wall Breaker':'-', 'Balloon':'-', 'Wizard':'-', 'Healer':'-', 'Dragon':'-', 'P.E.K.K.A':'-', 'Baby Dragon':'-', 'Miner':'-', 'Electro Dragon':'-', 'Yeti':'-', 'Minion':'-', 'Hog Rider':'-', 'Valkyrie':'-', 'Golem':'-', 'Witch':'-', 'Lava Hound':'-', 'Bowler':'-', 'Ice Golem':'-', 'Headhunter':'-', 'Wall Wrecker':'-', 'Battle Blimp':'-', 'Stone Slammer':'-', 'Siege Barracks':'-', 'Log Launcher':'-', 'Unicorn':'-', 'L.A.S.S.I':'-', 'Mighty Yak':'-', 'Electro Owl':'-'}
+        for troop in troops:
+            if troop['name'] in troop_dict:
+                troop_dict[troop['name']] = str(troop['name']['level'])
+
 
     #COMMANDS
     @commands.command(aliases=['linkprofile', 'LINKP', 'LINKPROFILE'])
@@ -132,29 +136,54 @@ class Profile(commands.Cog):
         await ctx.send(embed=profile_embed)
 
     
-    # @commands.command()
-    # async def units(self, ctx, tag=''):
-    #     if tag.startswith('#'): tag = tag[1:]
-    #     if not tag:
-    #         tag = postgresql.select_player_id(ctx.author.id)[0]
+    @commands.command()
+    async def units(self, ctx, tag=''):
+        if tag.startswith('#'): tag = tag[1:]
+        if not tag:
+            tag = postgresql.select_player_id(ctx.author.id)[0]
         
-    #     response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+        response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
         
-    #     if response.status_code != 200:
-    #         await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid tag following the profile command.**')
-    #         return
+        if response.status_code != 200:
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid tag following the profile command.**')
+            return
 
-    #     with open('txt/units.txt', 'r') as f:
-    #         text = f.read()
+        with open('txt/units.txt', 'r') as f:
+            text = f.read()
 
-    #     profile = response.json()
-    #     hero_lvls = util.get_heroes(profile['heroes'])
-    #     profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description='')
-    #     profile_embed.add_field(name='**Troops**', value=text.format(
-            
-
-    #     ))
-    #     await ctx.send(embed=profile_embed)
+        profile = response.json()
+        troops = self.get_troops(profile['troops'])
+        spells = self.get_spells(profile['spells'])
+        profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
+            e1=troops['Barbarian'],
+            e2=troops['Archer'],
+            e3=troops['Giant'],
+            e4=troops['Goblin'],
+            e5=troops['Wall Breaker'],
+            e6=troops['Balloon'],
+            e7=troops['Wizard'],
+            e8=troops['Healer'],
+            e9=troops['Dragon'],
+            e10=troops['P.E.K.K.A'],
+            e11=troops['Baby Dragon'],
+            e12=troops['Miner'],
+            e13=troops['Electro Dragon'],
+            e14=troops['Yeti'],
+            d1=troops['Minion'],
+            d2=troops['Hog Rider'],
+            d3=troops['Valkyrie'],
+            d4=troops['Golem'],
+            d5=troops['Witch'],
+            d6=troops['Lava Hound'],
+            d7=troops['Bowler'],
+            d8=troops['Ice Golem'],
+            d9=troops['Headhunter'],
+            p1=troops['Unicorn'],
+            p2=troops['L.A.S.S.I'],
+            p3=troops['Mighty Yak'],
+            p4=troops['Electro Owl']
+        ))
+        await ctx.send(embed=profile_embed)
         
 
 
