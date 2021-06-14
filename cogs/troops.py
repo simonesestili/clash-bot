@@ -270,5 +270,71 @@ class Troops(commands.Cog):
         await ctx.send(embed=util.embed(self.data['home']['troops'][name], util.title(name), 'https://clashofclans.fandom.com/wiki/Ice_Hound'))
 
 
+    @commands.command()
+    async def unicorn(self, ctx):
+        name = 'unicorn'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name]['img'], util.title(name), 'https://clashofclans.fandom.com/wiki/Unicorn'))
+
+
+    @commands.command()
+    async def lassi(self, ctx):
+        name = 'lassi'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name]['img'], util.title(name), 'https://clashofclans.fandom.com/wiki/L.A.S.S.I'))
+
+
+    @commands.command()
+    async def mightyyak(self, ctx):
+        name = 'mightyYak'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name]['img'], util.title(name), 'https://clashofclans.fandom.com/wiki/Mighty_Yak'))
+
+
+    @commands.command()
+    async def electroowl(self, ctx):
+        name = 'electroOwl'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name]['img'], util.title(name), 'https://clashofclans.fandom.com/wiki/Electro_Owl'))
+
+
+    @commands.command()
+    async def wallwrecker(self, ctx, level):
+        name = 'wallWrecker'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Wall_Wrecker'))
+
+
+    @commands.command()
+    async def battleblimp(self, ctx, level):
+        name = 'battleBlimp'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Battle_Blimp'))
+
+
+    @commands.command()
+    async def stoneslammer(self, ctx, level):
+        name = 'stoneSlammer'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Stone_Slammer'))
+
+
+    @commands.command()
+    async def siegebarracks(self, ctx, level):
+        name = 'siegeBarracks'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Siege_Barracks'))
+
+
+    @commands.command()
+    async def loglauncher(self, ctx, level):
+        name = 'logLauncher'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Log_Launcher'))
+
+
+    
+
+
 def setup(bot):
     bot.add_cog(Troops(bot))
