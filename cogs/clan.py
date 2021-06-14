@@ -23,6 +23,15 @@ class Clan(commands.Cog):
     def format_donations(self, num):
         return ' ' * (6 - len(num)) + num
 
+
+    def format_stats(self, num, is_own_clan):
+        num = str(num)
+        if is_own_clan:
+            return ' ' * (7 - len(num)) + num
+        else:
+            return num + ' ' * (7 - len(num))
+
+
     @commands.command()
     async def clan(self, ctx, tag=''):
         tag = tag.upper()
@@ -160,7 +169,49 @@ class Clan(commands.Cog):
         
         embed = discord.Embed(title=f'**{response.json()["name"]}{response.json()["tag"]}**', description='```'+table+'```')
         await ctx.send(embed=util.embed)
-            
+
+    
+    @commands.command()
+    async def currwar(self, ctx, tag=''):
+        tag = tag.upper()
+        if tag.startswith('#'): tag = tag[1:]
+        if not tag:
+            tag = postgresql.select_player_id(ctx.author.id)
+            if not tag:
+                await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid clan tag following the clan command.**')
+                return
+            response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag[0]}', headers=headers)
+            tag = response.json()['clan']['tag'][1:]        
+        
+        response = requests.get(f'https://api.clashofclans.com/v1/clans/%23{tag}/currentwar', headers=headers)
+
+        if response.status_code != 200:
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid clan tag following the clan command.**')
+            return
+
+        war = response.json()
+
+        if war['state'] != 'inWar':
+            await ctx.send(f'**{war["clan"]["name"]}{war["clan"]["tag"]} is not currently in an active clan war.**')
+            return
+
+        with open('txt/curr_war.txt', 'r') as f:
+            text = f.read()
+
+        embed = discord.Embed(title=f'**{war["clan"]["name"]}{war["clan"]["tag"]}**', description=text.format(
+            opp_name=war['opponent']['name'],
+            opp_tag=war['opponent']['tag'],
+            size=war['teamSize'],
+            stars=self.format_stats(war['clan']['stars'], True),
+            opp_stars=self.format_stats(war['opponent']['stars'], False),
+            attacks=self.format_stats(war['clan']['attacks'], True),
+            opp_attacks=self.format_stats(war['opponent']['attacks'], False),
+            destruction=self.format_stats(str(war['clan']['destructionPercentage']) + '%', True),
+            opp_destruction=self.format_stats(str(war['opponent']['destructionPercentage']) + '%', False)
+        ))
+        await ctx.send(embed=embed)
+
+        
 
 def setup(bot):
     bot.add_cog(Clan(bot))

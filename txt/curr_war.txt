@@ -1,0 +1,10 @@
+**Opponent:**
+{opp_name}{opp_tag}
+
+**Team Size:**
+{size} vs {size}
+
+**War Stats:**
+`**{stars}**`  :star:  `**{opp_stars}**`
+`**{attacks}**`  :crossed_swords:  `**{opp_attacks}**`
+`**{destruction}**`  <:percent:854140970232184892>  `**{opp_destruction}**`
