@@ -70,6 +70,7 @@ class Profile(commands.Cog):
 
     @commands.command(aliases=['PROFILE'])
     async def profile(self, ctx, tag=''):
+        tag = tag.upper()
         if tag.startswith('#'): tag = tag[1:]    
         tag = postgresql.select_player_id(ctx.author.id) if not tag else tag
         if not tag:
@@ -114,6 +115,7 @@ class Profile(commands.Cog):
     
     @commands.command(aliases=['BUILDER'])
     async def builder(self, ctx, tag=''):
+        tag = tag.upper()
         if tag.startswith('#'): tag = tag[1:]    
         tag = postgresql.select_player_id(ctx.author.id) if not tag else tag    
         if not tag:
@@ -146,6 +148,7 @@ class Profile(commands.Cog):
     
     @commands.command()
     async def units(self, ctx, tag=''):
+        tag = tag.upper()
         if tag.startswith('#'): tag = tag[1:]
         if not tag:
             tag = postgresql.select_player_id(ctx.author.id)[0]
