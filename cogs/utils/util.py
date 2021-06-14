@@ -1,5 +1,7 @@
 import requests
 import os 
+import discord
+from discord.ext import commands
 
 os.environ['http_proxy'] = os.environ.get('FIXIE_URL', '')
 os.environ['https_proxy'] = os.environ.get('FIXIE_URL', '')
@@ -24,6 +26,24 @@ def get_th(th_lvl):
     if th_lvl == 3: return ':TownHall3:852342970472726578'
     if th_lvl == 2: return ':TownHall2:852342970291060816'
     else: return ':TownHall1:852342970597244968'
+
+
+def embed(data, name, url, level=0):
+    if level == 0:
+        embed = discord.Embed(title=f'__{name}__', url=url)
+    else:
+        embed = discord.Embed(title=f'__{name} {level}__', url=url)
+    embed.set_image(url=data)
+    return embed
+
+
+def title(text):
+    title = ''
+    for let in text:
+        if let.isupper():
+            title += ' '
+        title += let
+    return title[0].upper() + title[1:]
 
 
 def get_trophy(profile):

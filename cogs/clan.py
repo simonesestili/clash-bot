@@ -159,7 +159,7 @@ class Clan(commands.Cog):
             num = num + 1
         
         embed = discord.Embed(title=f'**{response.json()["name"]}{response.json()["tag"]}**', description='```'+table+'```')
-        await ctx.send(embed=embed)
+        await ctx.send(embed=util.embed)
             
 
 def setup(bot):
