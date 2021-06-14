@@ -20,8 +20,12 @@ class Clan(commands.Cog):
         self.bot = bot
 
 
+    def format_donations(self, num):
+        return ' ' * (6 - len(num)) + num
+
     @commands.command()
     async def clan(self, ctx, tag=''):
+        tag = tag.upper()
         if tag.startswith('#'): tag = tag[1:]
         if not tag:
             tag = postgresql.select_player_id(ctx.author.id)
@@ -75,6 +79,7 @@ class Clan(commands.Cog):
 
     @commands.command()
     async def stats(self, ctx, tag=''):
+        tag = tag.upper()
         if tag.startswith('#'): tag = tag[1:]
         if not tag:
             tag = postgresql.select_player_id(ctx.author.id)
@@ -123,6 +128,39 @@ class Clan(commands.Cog):
             ))
 
         await ctx.send(embed=profile_embed)
+
+
+    @commands.command()
+    async def donations(self, ctx, tag=''):
+        tag = tag.upper()
+        if tag.startswith('#'): tag = tag[1:]
+        if not tag:
+            tag = postgresql.select_player_id(ctx.author.id)
+            if not tag:
+                await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid tag following the stats command.**')
+                return
+            tag = postgresql.select_player_id(ctx.author.id)[0]
+            response = requests.get(f'https://api.clashofclans.com/v1/players/%23{tag}', headers=headers)
+            tag = response.json()['clan']['tag'][1:]        
+        
+        response = requests.get(f'https://api.clashofclans.com/v1/clans/%23{tag}', headers=headers)
+
+        if response.status_code != 200:
+            await ctx.send('**Please link a valid player tag with the \'link\' command or enter a valid tag following the stats command.**')
+            return
+
+        members = sorted(response.json()['memberList'], key=lambda member: member['donations'], reverse=True)
+
+        table = ' #    DON    REC  NAME '
+        num = 1
+        for member in members:
+            disp_num = str(num) if num > 9 else ' ' + str(num)
+            table += f"\n{disp_num} {self.format_donations(str(member['donations']))} {self.format_donations(str(member['donationsReceived']))}  {member['name']}"
+            num = num + 1
+        
+        embed = discord.Embed(title=f'**{response.json()["name"]}{response.json()["tag"]}**', description='```'+table+'```')
+        await ctx.send(embed=embed)
+            
 
 def setup(bot):
     bot.add_cog(Clan(bot))

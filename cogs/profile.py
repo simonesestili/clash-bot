@@ -170,7 +170,7 @@ class Profile(commands.Cog):
         spells = self.get_spells(profile['spells'])
         max_troops = data['home']['troops']
         max_spells = data['home']['spells']
-        profile_embed = discord.Embed(title=f'{profile["name"]}{profile["tag"]}', description=text.format(
+        profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
             e1=troops['Barbarian'], em1=max_troops['barbarian']['max'][th_lvl-1],
             e2=troops['Archer'], em2=max_troops['archer']['max'][th_lvl-1],
             e3=troops['Giant'], em3=max_troops['giant']['max'][th_lvl-1],
