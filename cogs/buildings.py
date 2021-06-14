@@ -10,7 +10,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def townhall(self, ctx, level):
+    async def townhall(self, ctx, level='1'):
         name = 'townHall'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -18,7 +18,7 @@ class Buildings(commands.Cog):
 
 
     @commands.command()
-    async def cannon(self, ctx, level):
+    async def cannon(self, ctx, level='1'):
         name = 'cannon'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -26,7 +26,7 @@ class Buildings(commands.Cog):
 
 
     @commands.command()
-    async def archertower(self, ctx, level):
+    async def archertower(self, ctx, level='1'):
         name = 'archerTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -34,7 +34,7 @@ class Buildings(commands.Cog):
 
 
     @commands.command()
-    async def mortar(self, ctx, level):
+    async def mortar(self, ctx, level='1'):
         name = 'mortar'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -42,7 +42,7 @@ class Buildings(commands.Cog):
 
 
     @commands.command()
-    async def airdefense(self, ctx, level):
+    async def airdefense(self, ctx, level='1'):
         name = 'airDefense'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -50,7 +50,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def wizardtower(self, ctx, level):
+    async def wizardtower(self, ctx, level='1'):
         name = 'wizardTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -58,7 +58,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def airsweeper(self, ctx, level):
+    async def airsweeper(self, ctx, level='1'):
         name = 'airSweeper'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -66,7 +66,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def hiddentesla(self, ctx, level):
+    async def hiddentesla(self, ctx, level='1'):
         name = 'hiddenTesla'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -74,7 +74,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def bombtower(self, ctx, level):
+    async def bombtower(self, ctx, level='1'):
         name = 'bombTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -82,7 +82,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def xbow(self, ctx, level):
+    async def xbow(self, ctx, level='1'):
         name = 'xBow'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -90,7 +90,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def infernotower(self, ctx, level):
+    async def infernotower(self, ctx, level='1'):
         name = 'infernoTower'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -98,7 +98,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def eagleartillery(self, ctx, level):
+    async def eagleartillery(self, ctx, level='1'):
         name = 'eagleArtillery'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -106,7 +106,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def scattershot(self, ctx, level):
+    async def scattershot(self, ctx, level='1'):
         name = 'scattershot'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -114,7 +114,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def wall(self, ctx, level):
+    async def wall(self, ctx, level='1'):
         name = 'wall'
         if level not in self.data['home']['buildings']['defenses'][name]: return
 
@@ -122,7 +122,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def goldmine(self, ctx, level):
+    async def goldmine(self, ctx, level='1'):
         name = 'goldMine'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -130,7 +130,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def goldstorage(self, ctx, level):
+    async def goldstorage(self, ctx, level='1'):
         name = 'goldStorage'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -138,7 +138,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def elixircollector(self, ctx, level):
+    async def elixircollector(self, ctx, level='1'):
         name = 'elixirCollector'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -146,7 +146,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def elixirstorage(self, ctx, level):
+    async def elixirstorage(self, ctx, level='1'):
         name = 'elixirStorage'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -154,7 +154,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def darkelixirdrill(self, ctx, level):
+    async def darkelixirdrill(self, ctx, level='1'):
         name = 'darkElixirDrill'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -162,7 +162,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def darkelixirstorage(self, ctx, level):
+    async def darkelixirstorage(self, ctx, level='1'):
         name = 'darkElixirStorage'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -170,7 +170,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def clancastle(self, ctx, level):
+    async def clancastle(self, ctx, level='1'):
         name = 'clanCastle'
         if level not in self.data['home']['buildings']['resources'][name]: return
 
@@ -178,7 +178,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def armycamp(self, ctx, level):
+    async def armycamp(self, ctx, level='1'):
         name = 'armyCamp'
         if level not in self.data['home']['buildings']['army'][name]: return
 
@@ -186,7 +186,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def barracks(self, ctx, level):
+    async def barracks(self, ctx, level='1'):
         name = 'barracks'
         if level not in self.data['home']['buildings']['army'][name]: return
 
@@ -194,7 +194,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def darkbarracks(self, ctx, level):
+    async def darkbarracks(self, ctx, level='1'):
         name = 'darkBarracks'
         if level not in self.data['home']['buildings']['army'][name]: return
 
@@ -202,7 +202,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def laboratory(self, ctx, level):
+    async def laboratory(self, ctx, level='1'):
         name = 'laboratory'
         if level not in self.data['home']['buildings']['army'][name]: return
 
@@ -210,7 +210,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def spellfactory(self, ctx, level):
+    async def spellfactory(self, ctx, level='1'):
         name = 'spellFactory'
         if level not in self.data['home']['buildings']['army'][name]: return
 
@@ -218,7 +218,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def darkspellfactory(self, ctx, level):
+    async def darkspellfactory(self, ctx, level='1'):
         name = 'darkSpellFactory'
         if level not in self.data['home']['buildings']['army'][name]: return
 
@@ -226,7 +226,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def workshop(self, ctx, level):
+    async def workshop(self, ctx, level='1'):
         name = 'workshop'
         if level not in self.data['home']['buildings']['army'][name]: return
 
@@ -234,7 +234,7 @@ class Buildings(commands.Cog):
 
     
     @commands.command()
-    async def pethouse(self, ctx, level):
+    async def pethouse(self, ctx, level='1'):
         name = 'petHouse'
         if level not in self.data['home']['buildings']['army'][name]: return
 

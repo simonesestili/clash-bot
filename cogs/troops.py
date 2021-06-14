@@ -10,7 +10,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def barbarian(self, ctx, level):
+    async def barbarian(self, ctx, level='1'):
         name = 'barbarian'
         if level not in self.data['home']['troops'][name]: return
 
@@ -18,7 +18,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def archer(self, ctx, level):
+    async def archer(self, ctx, level='1'):
         name = 'archer'
         if level not in self.data['home']['troops'][name]: return
 
@@ -26,7 +26,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def giant(self, ctx, level):
+    async def giant(self, ctx, level='1'):
         name = 'giant'
         if level not in self.data['home']['troops'][name]: return
 
@@ -34,7 +34,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def goblin(self, ctx, level):
+    async def goblin(self, ctx, level='1'):
         name = 'goblin'
         if level not in self.data['home']['troops'][name]: return
 
@@ -42,7 +42,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def wallbreaker(self, ctx, level):
+    async def wallbreaker(self, ctx, level='1'):
         name = 'wallBreaker'
         if level not in self.data['home']['troops'][name]: return
 
@@ -50,7 +50,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def balloon(self, ctx, level):
+    async def balloon(self, ctx, level='1'):
         name = 'balloon'
         if level not in self.data['home']['troops'][name]: return
 
@@ -58,7 +58,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def wizard(self, ctx, level):
+    async def wizard(self, ctx, level='1'):
         name = 'wizard'
         if level not in self.data['home']['troops'][name]: return
 
@@ -66,7 +66,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def healer(self, ctx, level):
+    async def healer(self, ctx, level='1'):
         name = 'healer'
         if level not in self.data['home']['troops'][name]: return
 
@@ -74,7 +74,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def dragon(self, ctx, level):
+    async def dragon(self, ctx, level='1'):
         name = 'dragon'
         if level not in self.data['home']['troops'][name]: return
 
@@ -82,7 +82,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def pekka(self, ctx, level):
+    async def pekka(self, ctx, level='1'):
         name = 'pekka'
         if level not in self.data['home']['troops'][name]: return
 
@@ -90,7 +90,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def babydragon(self, ctx, level):
+    async def babydragon(self, ctx, level='1'):
         name = 'babyDragon'
         if level not in self.data['home']['troops'][name]: return
 
@@ -98,7 +98,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def miner(self, ctx, level):
+    async def miner(self, ctx, level='1'):
         name = 'miner'
         if level not in self.data['home']['troops'][name]: return
 
@@ -106,7 +106,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def electrodragon(self, ctx, level):
+    async def electrodragon(self, ctx, level='1'):
         name = 'electroDragon'
         if level not in self.data['home']['troops'][name]: return
 
@@ -114,7 +114,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def yeti(self, ctx, level):
+    async def yeti(self, ctx, level='1'):
         name = 'yeti'
         if level not in self.data['home']['troops'][name]: return
 
@@ -122,7 +122,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def minion(self, ctx, level):
+    async def minion(self, ctx, level='1'):
         name = 'minion'
         if level not in self.data['home']['troops'][name]: return
 
@@ -130,7 +130,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def hogrider(self, ctx, level):
+    async def hogrider(self, ctx, level='1'):
         name = 'hogRider'
         if level not in self.data['home']['troops'][name]: return
 
@@ -138,7 +138,7 @@ class Troops(commands.Cog):
 
         
     @commands.command()
-    async def valkyrie(self, ctx, level):
+    async def valkyrie(self, ctx, level='1'):
         name = 'valkyrie'
         if level not in self.data['home']['troops'][name]: return
 
@@ -146,7 +146,7 @@ class Troops(commands.Cog):
 
         
     @commands.command()
-    async def golem(self, ctx, level):
+    async def golem(self, ctx, level='1'):
         name = 'golem'
         if level not in self.data['home']['troops'][name]: return
 
@@ -154,7 +154,7 @@ class Troops(commands.Cog):
 
         
     @commands.command()
-    async def witch(self, ctx, level):
+    async def witch(self, ctx, level='1'):
         name = 'witch'
         if level not in self.data['home']['troops'][name]: return
 
@@ -162,7 +162,7 @@ class Troops(commands.Cog):
 
         
     @commands.command()
-    async def lavahound(self, ctx, level):
+    async def lavahound(self, ctx, level='1'):
         name = 'lavaHound'
         if level not in self.data['home']['troops'][name]: return
 
@@ -170,7 +170,7 @@ class Troops(commands.Cog):
 
         
     @commands.command()
-    async def bowler(self, ctx, level):
+    async def bowler(self, ctx, level='1'):
         name = 'bowler'
         if level not in self.data['home']['troops'][name]: return
 
@@ -178,7 +178,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def icegolem(self, ctx, level):
+    async def icegolem(self, ctx, level='1'):
         name = 'iceGolem'
         if level not in self.data['home']['troops'][name]: return
 
@@ -186,7 +186,7 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def headhunter(self, ctx, level):
+    async def headhunter(self, ctx, level='1'):
         name = 'headhunter'
         if level not in self.data['home']['troops'][name]: return
 
@@ -299,41 +299,38 @@ class Troops(commands.Cog):
 
 
     @commands.command()
-    async def wallwrecker(self, ctx, level):
+    async def wallwrecker(self, ctx, level='1'):
         name = 'wallWrecker'
 
-        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Wall_Wrecker'))
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Wall_Wrecker', level))
 
 
     @commands.command()
-    async def battleblimp(self, ctx, level):
+    async def battleblimp(self, ctx, level='1'):
         name = 'battleBlimp'
 
-        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Battle_Blimp'))
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Battle_Blimp', level))
 
 
     @commands.command()
-    async def stoneslammer(self, ctx, level):
+    async def stoneslammer(self, ctx, level='1'):
         name = 'stoneSlammer'
 
-        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Stone_Slammer'))
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Stone_Slammer', level))
 
 
     @commands.command()
-    async def siegebarracks(self, ctx, level):
+    async def siegebarracks(self, ctx, level='1'):
         name = 'siegeBarracks'
 
-        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Siege_Barracks'))
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Siege_Barracks', level))
 
 
     @commands.command()
-    async def loglauncher(self, ctx, level):
+    async def loglauncher(self, ctx, level='1'):
         name = 'logLauncher'
 
-        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Log_Launcher'))
-
-
-    
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Log_Launcher', level))
 
 
 def setup(bot):
