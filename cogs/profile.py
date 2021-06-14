@@ -1,13 +1,11 @@
 import os
-from typing import TypedDict
 import requests
 import discord
 from discord.ext import commands
 import psycopg2
-from PIL import Image, ImageFont, ImageDraw
-import numpy as np
 from cogs.SQL import postgresql
 from cogs.utils import util
+import json
 
 os.environ['http_proxy'] = os.environ.get('FIXIE_URL', '')
 os.environ['https_proxy'] = os.environ.get('FIXIE_URL', '')
@@ -32,7 +30,7 @@ class Profile(commands.Cog):
 
 
     def get_spells(self, spells):
-        spell_dict = {'Lightning Spell':'-', 'Healing Spell':'-', 'Rage Spell':'-', 'Jump Spell':'-', 'Freeze Spell':'-', 'Clone Spell':'-', 'Invisibility Spell':'-', 'Poison Spell':'-', 'Earthquake Spell':'-', 'Haste':'-', 'Skeleton Spell':'-', 'Bat Spell':'-'}
+        spell_dict = {'Lightning Spell':'-', 'Healing Spell':'-', 'Rage Spell':'-', 'Jump Spell':'-', 'Freeze Spell':'-', 'Clone Spell':'-', 'Invisibility Spell':'-', 'Poison Spell':'-', 'Earthquake Spell':'-', 'Haste Spell':'-', 'Skeleton Spell':'-', 'Bat Spell':'-'}
         for spell in spells:
             if spell['name'] in spell_dict:
                 spell_dict[spell['name']] = str(spell['level'])
@@ -161,49 +159,59 @@ class Profile(commands.Cog):
         with open('txt/units.txt', 'r') as f:
             text = f.read()
 
+        with open('cogs/clash_data.json', 'r') as f:
+            data = json.load(f)
         profile = response.json()
+        th_lvl=profile['townHallLevel']
         troops = self.get_troops(profile['troops'])
         spells = self.get_spells(profile['spells'])
-        profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
-            e1=troops['Barbarian'], 
-            e2=troops['Archer'],
-            e3=troops['Giant'],
-            e4=troops['Goblin'],
-            e5=troops['Wall Breaker'],
-            e6=troops['Balloon'],
-            e7=troops['Wizard'],
-            e8=troops['Healer'],
-            e9=troops['Dragon'],
-            e10=troops['P.E.K.K.A'],
-            e11=troops['Baby Dragon'],
-            e12=troops['Miner'],
-            e13=troops['Electro Dragon'],
-            e14=troops['Yeti'],
-            d1=troops['Minion'],
-            d2=troops['Hog Rider'],
-            d3=troops['Valkyrie'],
-            d4=troops['Golem'],
-            d5=troops['Witch'],
-            d6=troops['Lava Hound'],
-            d7=troops['Bowler'],
-            d8=troops['Ice Golem'],
-            d9=troops['Headhunter'],
-            p1=troops['Unicorn'],
-            p2=troops['L.A.S.S.I'],
-            p3=troops['Mighty Yak'],
-            p4=troops['Electro Owl'],
-            es1=spells['Lightning Spell'],
-            es2=spells['Healing Spell'],
-            es3=spells['Rage Spell'],
-            es4=spells['Jump Spell'],
-            es5=spells['Freeze Spell'],
-            es6=spells['Clone Spell'],
-            es7=spells['Invisibility Spell'],
-            ds1=spells['Poison Spell'],
-            ds2=spells['Earthquake Spell'],
-            ds3=spells['Haste Spell'],
-            ds4=spells['Skeleton Spell'],
-            ds5=spells['Bat Spell']            
+        max_troops = data['home']['troops']
+        max_spells = data['home']['spells']
+        profile_embed = discord.Embed(title=f'{profile["name"]}{profile["tag"]}', description=text.format(
+            e1=troops['Barbarian'], em1=max_troops['barbarian']['max'][th_lvl-1],
+            e2=troops['Archer'], em2=max_troops['archer']['max'][th_lvl-1],
+            e3=troops['Giant'], em3=max_troops['giant']['max'][th_lvl-1],
+            e4=troops['Goblin'], em4=max_troops['goblin']['max'][th_lvl-1],
+            e5=troops['Wall Breaker'], em5=max_troops['wallBreaker']['max'][th_lvl-1],
+            e6=troops['Balloon'], em6=max_troops['balloon']['max'][th_lvl-1],
+            e7=troops['Wizard'], em7=max_troops['wizard']['max'][th_lvl-1],
+            e8=troops['Healer'], em8=max_troops['healer']['max'][th_lvl-1],
+            e9=troops['Dragon'], em9=max_troops['dragon']['max'][th_lvl-1],
+            e10=troops['P.E.K.K.A'], em10=max_troops['pekka']['max'][th_lvl-1],
+            e11=troops['Baby Dragon'], em11=max_troops['babyDragon']['max'][th_lvl-1],
+            e12=troops['Miner'], em12=max_troops['miner']['max'][th_lvl-1],
+            e13=troops['Electro Dragon'], em13=max_troops['electroDragon']['max'][th_lvl-1],
+            e14=troops['Yeti'], em14=max_troops['yeti']['max'][th_lvl-1],
+            d1=troops['Minion'], dm1=max_troops['minion']['max'][th_lvl-1],
+            d2=troops['Hog Rider'], dm2=max_troops['hogRider']['max'][th_lvl-1],
+            d3=troops['Valkyrie'], dm3=max_troops['valkyrie']['max'][th_lvl-1],
+            d4=troops['Golem'], dm4=max_troops['golem']['max'][th_lvl-1],
+            d5=troops['Witch'], dm5=max_troops['witch']['max'][th_lvl-1],
+            d6=troops['Lava Hound'], dm6=max_troops['lavaHound']['max'][th_lvl-1],
+            d7=troops['Bowler'], dm7=max_troops['bowler']['max'][th_lvl-1],
+            d8=troops['Ice Golem'], dm8=max_troops['iceGolem']['max'][th_lvl-1],
+            d9=troops['Headhunter'], dm9=max_troops['headhunter']['max'][th_lvl-1],
+            p1=troops['Unicorn'], pm1=max_troops['unicorn']['max'][th_lvl-1],
+            p2=troops['L.A.S.S.I'], pm2=max_troops['lassi']['max'][th_lvl-1],
+            p3=troops['Mighty Yak'], pm3=max_troops['mightyYak']['max'][th_lvl-1],
+            p4=troops['Electro Owl'], pm4=max_troops['electroOwl']['max'][th_lvl-1],
+            es1=spells['Lightning Spell'], esm1=max_spells['lightning']['max'][th_lvl-1],
+            es2=spells['Healing Spell'], esm2=max_spells['healing']['max'][th_lvl-1],
+            es3=spells['Rage Spell'], esm3=max_spells['rage']['max'][th_lvl-1],
+            es4=spells['Jump Spell'], esm4=max_spells['jump']['max'][th_lvl-1],
+            es5=spells['Freeze Spell'], esm5=max_spells['freeze']['max'][th_lvl-1],
+            es6=spells['Clone Spell'], esm6=max_spells['clone']['max'][th_lvl-1],
+            es7=spells['Invisibility Spell'], esm7=max_spells['invisibility']['max'][th_lvl-1],
+            ds1=spells['Poison Spell'], dsm1=max_spells['poison']['max'][th_lvl-1],
+            ds2=spells['Earthquake Spell'], dsm2=max_spells['earthquake']['max'][th_lvl-1],
+            ds3=spells['Haste Spell'], dsm3=max_spells['haste']['max'][th_lvl-1],
+            ds4=spells['Skeleton Spell'], dsm4=max_spells['skeleton']['max'][th_lvl-1],
+            ds5=spells['Bat Spell'], dsm5=max_spells['bat']['max'][th_lvl-1],
+            m1=troops['Wall Wrecker'], mm1=max_troops['wallWrecker']['max'][th_lvl-1],
+            m2=troops['Battle Blimp'], mm2=max_troops['battleBlimp']['max'][th_lvl-1],
+            m3=troops['Stone Slammer'], mm3=max_troops['stoneSlammer']['max'][th_lvl-1],
+            m4=troops['Siege Barracks'], mm4=max_troops['siegeBarracks']['max'][th_lvl-1],
+            m5=troops['Log Launcher'], mm5=max_troops['logLauncher']['max'][th_lvl-1]
         ))
         await ctx.send(embed=profile_embed)
         
