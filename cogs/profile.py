@@ -1,4 +1,5 @@
 import os
+from typing import TypedDict
 import requests
 import discord
 from discord.ext import commands
@@ -26,8 +27,17 @@ class Profile(commands.Cog):
         troop_dict = {'Barbarian':'-', 'Archer':'-', 'Giant':'-', 'Goblin':'-', 'Wall Breaker':'-', 'Balloon':'-', 'Wizard':'-', 'Healer':'-', 'Dragon':'-', 'P.E.K.K.A':'-', 'Baby Dragon':'-', 'Miner':'-', 'Electro Dragon':'-', 'Yeti':'-', 'Minion':'-', 'Hog Rider':'-', 'Valkyrie':'-', 'Golem':'-', 'Witch':'-', 'Lava Hound':'-', 'Bowler':'-', 'Ice Golem':'-', 'Headhunter':'-', 'Wall Wrecker':'-', 'Battle Blimp':'-', 'Stone Slammer':'-', 'Siege Barracks':'-', 'Log Launcher':'-', 'Unicorn':'-', 'L.A.S.S.I':'-', 'Mighty Yak':'-', 'Electro Owl':'-'}
         for troop in troops:
             if troop['name'] in troop_dict:
-                troop_dict[troop['name']] = str(troop['name']['level'])
+                troop_dict[troop['name']] = str(troop['level'])
+        return troop_dict
 
+
+    def get_spells(self, spells):
+        spell_dict = {'Lightning Spell':'-', 'Healing Spell':'-', 'Rage Spell':'-', 'Jump Spell':'-', 'Freeze Spell':'-', 'Clone Spell':'-', 'Invisibility Spell':'-', 'Poison Spell':'-', 'Earthquake Spell':'-', 'Haste':'-', 'Skeleton Spell':'-', 'Bat Spell':'-'}
+        for spell in spells:
+            if spell['name'] in spell_dict:
+                spell_dict[spell['name']] = str(spell['level'])
+        return spell_dict
+ 
 
     #COMMANDS
     @commands.command(aliases=['linkprofile', 'LINKP', 'LINKPROFILE'])
@@ -155,7 +165,7 @@ class Profile(commands.Cog):
         troops = self.get_troops(profile['troops'])
         spells = self.get_spells(profile['spells'])
         profile_embed = discord.Embed(title=f'**{profile["name"]}{profile["tag"]}**', description=text.format(
-            e1=troops['Barbarian'],
+            e1=troops['Barbarian'], 
             e2=troops['Archer'],
             e3=troops['Giant'],
             e4=troops['Goblin'],
@@ -181,7 +191,19 @@ class Profile(commands.Cog):
             p1=troops['Unicorn'],
             p2=troops['L.A.S.S.I'],
             p3=troops['Mighty Yak'],
-            p4=troops['Electro Owl']
+            p4=troops['Electro Owl'],
+            es1=spells['Lightning Spell'],
+            es2=spells['Healing Spell'],
+            es3=spells['Rage Spell'],
+            es4=spells['Jump Spell'],
+            es5=spells['Freeze Spell'],
+            es6=spells['Clone Spell'],
+            es7=spells['Invisibility Spell'],
+            ds1=spells['Poison Spell'],
+            ds2=spells['Earthquake Spell'],
+            ds3=spells['Haste Spell'],
+            ds4=spells['Skeleton Spell'],
+            ds5=spells['Bat Spell']            
         ))
         await ctx.send(embed=profile_embed)
         
