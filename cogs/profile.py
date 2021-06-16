@@ -22,7 +22,7 @@ class Profile(commands.Cog):
 
     
     def get_troops(self, troops):
-        troop_dict = {'Barbarian':'-', 'Archer':'-', 'Giant':'-', 'Goblin':'-', 'Wall Breaker':'-', 'Balloon':'-', 'Wizard':'-', 'Healer':'-', 'Dragon':'-', 'P.E.K.K.A':'-', 'Baby Dragon':'-', 'Miner':'-', 'Electro Dragon':'-', 'Yeti':'-', 'Minion':'-', 'Hog Rider':'-', 'Valkyrie':'-', 'Golem':'-', 'Witch':'-', 'Lava Hound':'-', 'Bowler':'-', 'Ice Golem':'-', 'Headhunter':'-', 'Wall Wrecker':'-', 'Battle Blimp':'-', 'Stone Slammer':'-', 'Siege Barracks':'-', 'Log Launcher':'-', 'Unicorn':'-', 'L.A.S.S.I':'-', 'Mighty Yak':'-', 'Electro Owl':'-'}
+        troop_dict = {'Barbarian':'-', 'Archer':'-', 'Giant':'-', 'Goblin':'-', 'Wall Breaker':'-', 'Balloon':'-', 'Wizard':'-', 'Healer':'-', 'Dragon':'-', 'P.E.K.K.A':'-', 'Baby Dragon':'-', 'Miner':'-', 'Electro Dragon':'-', 'Yeti':'-', 'Dragon Rider':'-', 'Minion':'-', 'Hog Rider':'-', 'Valkyrie':'-', 'Golem':'-', 'Witch':'-', 'Lava Hound':'-', 'Bowler':'-', 'Ice Golem':'-', 'Headhunter':'-', 'Wall Wrecker':'-', 'Battle Blimp':'-', 'Stone Slammer':'-', 'Siege Barracks':'-', 'Log Launcher':'-', 'Unicorn':'-', 'L.A.S.S.I':'-', 'Mighty Yak':'-', 'Electro Owl':'-'}
         for troop in troops:
             if troop['name'] in troop_dict and troop['village'] == 'home':
                 troop_dict[troop['name']] = str(troop['level'])
@@ -38,7 +38,7 @@ class Profile(commands.Cog):
  
 
     #COMMANDS
-    @commands.command(aliases=['linkprofile', 'LINKP', 'LINKPROFILE'])
+    @commands.command(help='Links Discord account to specified Clash of Clans profile.\n`.link <tag>`')
     async def link(self, ctx, tag=''):
         tag = tag.upper()
         if tag.startswith('#'):
@@ -185,6 +185,7 @@ class Profile(commands.Cog):
             e12=troops['Miner'], em12=max_troops['miner']['max'][th_lvl-1],
             e13=troops['Electro Dragon'], em13=max_troops['electroDragon']['max'][th_lvl-1],
             e14=troops['Yeti'], em14=max_troops['yeti']['max'][th_lvl-1],
+            e15=troops['Dragon Rider'],  em15=max_troops['dragonRider']['max'][th_lvl-1],
             d1=troops['Minion'], dm1=max_troops['minion']['max'][th_lvl-1],
             d2=troops['Hog Rider'], dm2=max_troops['hogRider']['max'][th_lvl-1],
             d3=troops['Valkyrie'], dm3=max_troops['valkyrie']['max'][th_lvl-1],

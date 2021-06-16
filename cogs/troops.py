@@ -12,7 +12,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def barbarian(self, ctx, level='1'):
         name = 'barbarian'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Barbarian', level))
 
@@ -20,7 +20,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def archer(self, ctx, level='1'):
         name = 'archer'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Archer', level))
 
@@ -28,7 +28,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def giant(self, ctx, level='1'):
         name = 'giant'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Giant', level))
 
@@ -36,7 +36,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def goblin(self, ctx, level='1'):
         name = 'goblin'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Goblin', level))
 
@@ -44,7 +44,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def wallbreaker(self, ctx, level='1'):
         name = 'wallBreaker'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Wall_Breaker', level))
 
@@ -52,7 +52,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def balloon(self, ctx, level='1'):
         name = 'balloon'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Balloon', level))
 
@@ -60,7 +60,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def wizard(self, ctx, level='1'):
         name = 'wizard'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Wizard', level))
 
@@ -68,7 +68,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def healer(self, ctx, level='1'):
         name = 'healer'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Healer', level))
 
@@ -76,7 +76,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def dragon(self, ctx, level='1'):
         name = 'dragon'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Dragon', level))
 
@@ -84,7 +84,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def pekka(self, ctx, level='1'):
         name = 'pekka'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/P.E.K.K.A', level))
 
@@ -92,7 +92,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def babydragon(self, ctx, level='1'):
         name = 'babyDragon'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Baby_Dragon/Home_Village', level))
 
@@ -100,7 +100,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def miner(self, ctx, level='1'):
         name = 'miner'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Miner', level))
 
@@ -108,7 +108,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def electrodragon(self, ctx, level='1'):
         name = 'electroDragon'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Electro_Dragon', level))
 
@@ -116,15 +116,23 @@ class Troops(commands.Cog):
     @commands.command()
     async def yeti(self, ctx, level='1'):
         name = 'yeti'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Yeti', level))
 
 
     @commands.command()
+    async def dragonrider(self, ctx, level='1'):
+        name = 'dragonRider'
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Dragon_Rider', level))
+
+
+    @commands.command()
     async def minion(self, ctx, level='1'):
         name = 'minion'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Minion', level))
 
@@ -132,7 +140,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def hogrider(self, ctx, level='1'):
         name = 'hogRider'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Hog_Rider', level))
 
@@ -140,7 +148,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def valkyrie(self, ctx, level='1'):
         name = 'valkyrie'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Valkyrie', level))
 
@@ -148,7 +156,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def golem(self, ctx, level='1'):
         name = 'golem'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Golem', level))
 
@@ -156,7 +164,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def witch(self, ctx, level='1'):
         name = 'witch'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Witch', level))
 
@@ -164,7 +172,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def lavahound(self, ctx, level='1'):
         name = 'lavaHound'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Lava_Hound', level))
 
@@ -172,7 +180,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def bowler(self, ctx, level='1'):
         name = 'bowler'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Bowler', level))
 
@@ -180,7 +188,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def icegolem(self, ctx, level='1'):
         name = 'iceGolem'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Ice_Golem', level))
 
@@ -188,7 +196,7 @@ class Troops(commands.Cog):
     @commands.command()
     async def headhunter(self, ctx, level='1'):
         name = 'headhunter'
-        if level not in self.data['home']['troops'][name]: return
+        if level not in self.data['home']['troops'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Headhunter', level))
 
@@ -268,6 +276,13 @@ class Troops(commands.Cog):
         name = 'iceHound'
 
         await ctx.send(embed=util.embed(self.data['home']['troops'][name], util.title(name), 'https://clashofclans.fandom.com/wiki/Ice_Hound'))
+
+
+    @commands.command()
+    async def rocketballoon(self, ctx):
+        name = 'rocketBalloon'
+
+        await ctx.send(embed=util.embed(self.data['home']['troops'][name], util.title(name), 'https://clashofclans.fandom.com/wiki/Rocket_Balloon'))
 
 
     @commands.command()

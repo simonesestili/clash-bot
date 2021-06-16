@@ -12,7 +12,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def townhall(self, ctx, level='1'):
         name = 'townHall'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Town_Hall', level))
 
@@ -20,7 +20,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def cannon(self, ctx, level='1'):
         name = 'cannon'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Cannon/Home_Village', level))
 
@@ -28,7 +28,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def archertower(self, ctx, level='1'):
         name = 'archerTower'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Archer_Tower', level))
 
@@ -36,7 +36,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def mortar(self, ctx, level='1'):
         name = 'mortar'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Mortar', level))
 
@@ -44,7 +44,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def airdefense(self, ctx, level='1'):
         name = 'airDefense'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Air_Defense', level))
 
@@ -52,7 +52,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def wizardtower(self, ctx, level='1'):
         name = 'wizardTower'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Wizard_Tower', level))
 
@@ -60,7 +60,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def airsweeper(self, ctx, level='1'):
         name = 'airSweeper'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Air_Sweeper', level))
 
@@ -68,7 +68,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def hiddentesla(self, ctx, level='1'):
         name = 'hiddenTesla'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Hidden_Tesla/Home_Village', level))
 
@@ -76,7 +76,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def bombtower(self, ctx, level='1'):
         name = 'bombTower'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Bomb_Tower', level))
 
@@ -84,7 +84,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def xbow(self, ctx, level='1'):
         name = 'xBow'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/X-Bow', level))
 
@@ -92,7 +92,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def infernotower(self, ctx, level='1'):
         name = 'infernoTower'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Inferno_Tower', level))
 
@@ -100,7 +100,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def eagleartillery(self, ctx, level='1'):
         name = 'eagleArtillery'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Eagle_Artillery', level))
 
@@ -108,7 +108,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def scattershot(self, ctx, level='1'):
         name = 'scattershot'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Scattershot', level))
 
@@ -116,7 +116,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def wall(self, ctx, level='1'):
         name = 'wall'
-        if level not in self.data['home']['buildings']['defenses'][name]: return
+        if level not in self.data['home']['buildings']['defenses'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['defenses'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Walls/Home_Village', level))
 
@@ -124,7 +124,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def goldmine(self, ctx, level='1'):
         name = 'goldMine'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Gold_Mine/Home_Village', level))
 
@@ -132,7 +132,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def goldstorage(self, ctx, level='1'):
         name = 'goldStorage'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Gold_Storage/Home_Village', level))
 
@@ -140,7 +140,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def elixircollector(self, ctx, level='1'):
         name = 'elixirCollector'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Elixir_Collector/Home_Village', level))
 
@@ -148,7 +148,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def elixirstorage(self, ctx, level='1'):
         name = 'elixirStorage'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Elixir_Storage/Home_Village', level))
 
@@ -156,7 +156,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def darkelixirdrill(self, ctx, level='1'):
         name = 'darkElixirDrill'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Elixir_Drill', level))
 
@@ -164,7 +164,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def darkelixirstorage(self, ctx, level='1'):
         name = 'darkElixirStorage'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Elixir_Storage', level))
 
@@ -172,7 +172,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def clancastle(self, ctx, level='1'):
         name = 'clanCastle'
-        if level not in self.data['home']['buildings']['resources'][name]: return
+        if level not in self.data['home']['buildings']['resources'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['resources'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Clan_Castle', level))
 
@@ -180,7 +180,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def armycamp(self, ctx, level='1'):
         name = 'armyCamp'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Army_Camp/Home_Village', level))
 
@@ -188,7 +188,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def barracks(self, ctx, level='1'):
         name = 'barracks'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Barracks', level))
 
@@ -196,7 +196,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def darkbarracks(self, ctx, level='1'):
         name = 'darkBarracks'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Barracks', level))
 
@@ -204,7 +204,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def laboratory(self, ctx, level='1'):
         name = 'laboratory'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Laboratory', level))
 
@@ -212,7 +212,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def spellfactory(self, ctx, level='1'):
         name = 'spellFactory'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Spell_Factory', level))
 
@@ -220,7 +220,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def darkspellfactory(self, ctx, level='1'):
         name = 'darkSpellFactory'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Dark_Spell_Factory', level))
 
@@ -228,7 +228,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def workshop(self, ctx, level='1'):
         name = 'workshop'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Workshop', level))
 
@@ -236,7 +236,7 @@ class Buildings(commands.Cog):
     @commands.command()
     async def pethouse(self, ctx, level='1'):
         name = 'petHouse'
-        if level not in self.data['home']['buildings']['army'][name]: return
+        if level not in self.data['home']['buildings']['army'][name]: await ctx.send(f'**Please enter a valid level for** `{util.title(name)}`')
 
         await ctx.send(embed=util.embed(self.data['home']['buildings']['army'][name][level], util.title(name), 'https://clashofclans.fandom.com/wiki/Pet_House', level))
 
