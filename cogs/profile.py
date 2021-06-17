@@ -38,7 +38,7 @@ class Profile(commands.Cog):
  
 
     #COMMANDS
-    @commands.command(help='Links Discord account to specified Clash of Clans profile.\n`.link <tag>`')
+    @commands.command()
     async def link(self, ctx, tag=''):
         tag = tag.upper()
         if tag.startswith('#'):
