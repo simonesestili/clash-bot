@@ -541,9 +541,9 @@
                 "max": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-","2","3","3"]
             },
             "dragonRider":{
-                "1": "",
-                "2": "",
-                "3": "",
+                "1": "https://static.wikia.nocookie.net/clashofclans/images/9/97/Dragon_Rider1.png/revision/latest/scale-to-width-down/100?cb=20210617060323",
+                "2": "https://static.wikia.nocookie.net/clashofclans/images/4/48/Dragon_Rider2.png/revision/latest/scale-to-width-down/100?cb=20210617060326",
+                "3": "https://static.wikia.nocookie.net/clashofclans/images/6/61/Dragon_Rider3.png/revision/latest/scale-to-width-down/100?cb=20210617060508",
                 "max": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "2", "3"]
             },
             "minion":{
