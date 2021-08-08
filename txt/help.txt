@@ -1,0 +1,23 @@
+**All Commands**
+
+**__Profile Commands__**
+`.profile`
+Displays player statistics summary.
+`.units`
+Displays all laboratory upgrades and their respective max level for the current townhall level.
+`.builder`
+Displayer player's builder base statistics summary.
+`.link <tag>`
+Links discord account to the provided clash of clans player tag.
+`.linked`
+Displays clash of clans player tag currently linked to your discord account.
+
+
+**__Clan Commands__**
+`.clan`
+              
+`.currwar`   
+        
+`.donations`  
+       
+`.stats` 

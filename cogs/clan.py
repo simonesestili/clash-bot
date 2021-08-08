@@ -195,6 +195,7 @@ class Clan(commands.Cog):
             await ctx.send(f'**{war["clan"]["name"]}{war["clan"]["tag"]} is not currently in an active clan war.**')
             return
 
+
         with open('txt/curr_war.txt', 'r') as f:
             text = f.read()
 
